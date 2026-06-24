@@ -7,14 +7,14 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment.Systems
     {
         public MovementType Type =>  MovementType.Jump;
         
-        public void Jump(Rigidbody2D rigidbody, float targetForce)
+        public void Jump(Rigidbody2D rigidbody, float force)
         {
             rigidbody.linearVelocity = Vector2.zero;
 
-            rigidbody.AddForce(Vector2.up * targetForce, ForceMode2D.Impulse);
+            rigidbody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
         }
         
-        public void Process(IMoveable target, IBaseMoveConfig config)
+        public void Process(IMoveable target, IBaseConfig config)
         {
             if (config is not IJumpConfig jumpConfig)
             {

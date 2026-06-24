@@ -9,19 +9,20 @@ public class RotationSystem : IRotationSystem
     
     public void Rotate(Transform birdTransform,IRotationConfig config, Vector2 velocity)
     {
-        var lerpValue = (velocity.y - config.MaxFallSpeed) / (0f - config.MaxFallSpeed + config.MaxAngle);
-        var angle = Mathf.Lerp(config.MinAngle, config.MaxAngle, Mathf.Clamp01(lerpValue));
+        float lerpValue = (velocity.y - config.MaxFallSpeed) / (0f - config.MaxFallSpeed + config.MaxAngle);
+        float angle = Mathf.Lerp(config.MinAngle, config.MaxAngle, Mathf.Clamp01(lerpValue));
 
         birdTransform.rotation = Quaternion.Euler(0, 0, angle);
     }
     
     
-    public void Process(IMoveable target, IBaseMoveConfig config)
+    public void Process(IMoveable target, IBaseConfig config)
     {
         if (config is not IRotationConfig rotationConfig)
         {
             return;
         }
+
         if (target.Rigidbody2D == null)
         {
             return;

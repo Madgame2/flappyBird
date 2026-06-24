@@ -12,34 +12,41 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment
 {
     public class MovementController : IMovementController, IDisposable
     {
+
         private readonly MovementSystemRegistry _systemRegistry;
 
-        private Dictionary<Guid, MovementContext> _permanentMovementsById = new();
-        private Queue<MovementContext> _pendingOneShots = new();
-        private MovementContext? _activeOneShotMovement; 
-        private CancellationTokenSource _oneShotCancellation; 
-        
-        private CancellationTokenSource _movementCycleCancellation = new();
-        
+        private readonly Dictionary<Guid, MovementContext> _permanentMovements = new();
+        private Queue<MovementContext> _oneShotQueue = new();
+        private MovementContext? _currentOneShot; // Текущая выполняемая одноразовая задача
+        private CancellationTokenSource _oneShotCts; // Для отмены текущей задачи
+
+        private bool _isGameRunning;
+
+        private readonly CancellationTokenSource _cts = new();
+
+
         public MovementController(MovementSystemRegistry systemRegistry)
         {
             _systemRegistry = systemRegistry;
-            
-            StartMovementCycle(_movementCycleCancellation.Token).Forget();
+
+            _isGameRunning = true;
+            StartMovementCycle(_cts.Token).Forget();
         }
-        
+
+
         private async UniTaskVoid StartMovementCycle(CancellationToken token)
         {
-            while (!token.IsCancellationRequested)
+            while (_isGameRunning && !token.IsCancellationRequested)
             {
-                foreach (var movementContext in _permanentMovementsById.Values)
+
+                foreach (var movementContext in _permanentMovements.Values)
                 {
                     CalculateMovement(movementContext);
                 }
 
-                while (_pendingOneShots.Count > 0)
+                while (_oneShotQueue.Count > 0)
                 {
-                    var movementContext = _pendingOneShots.Dequeue();
+                    var movementContext = _oneShotQueue.Dequeue();
 
                     CalculateMovement(movementContext);
                 }
@@ -55,7 +62,6 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment
                 try
                 {
                     var movementSystem = _systemRegistry.GetSystem(movementRule.Type);
-                    
                     movementSystem.Process(context.TargetObject, movementRule.Config);
                 }
                 catch (Exception e)
@@ -64,51 +70,49 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment
                 }
             }
         }
-        
+
+        public void ProcessJump()
+        {
+            if (!_isGameRunning) return;
+
+
+        }
 
         public void Dispose()
         {
-            _movementCycleCancellation?.Cancel();
-                
-            _oneShotCancellation?.Cancel();
-            _oneShotCancellation?.Dispose();
-            
-            _pendingOneShots.Clear();
-            _permanentMovementsById.Clear();
+            _isGameRunning = false;
         }
 
         public Guid AddPermanent(MovementContext context)
         {
-            _permanentMovementsById.Add(context.Id, context);
+            _permanentMovements.Add(context.Id, context);
             return context.Id;
         }
 
         public void RemovePermanent(Guid id)
         {
-            _permanentMovementsById.Remove(id);
+            _permanentMovements.Remove(id);
         }
 
         public Guid EnqueueOneShot(MovementContext context)
         {
-            _pendingOneShots.Enqueue(context);
+            _oneShotQueue.Enqueue(context);
             return context.Id;
         }
 
         public void CancelOneShot(Guid id)
         {
-            if (_activeOneShotMovement != null && _activeOneShotMovement.Value.Id == id)
+            if (_currentOneShot != null && _currentOneShot.Value.Id == id)
             {
-                _oneShotCancellation?.Cancel();
+                _oneShotCts?.Cancel();
                 return;
             }
 
-            if (_pendingOneShots.Any(x => x.Id == id))
+            if (_oneShotQueue.Any(x => x.Id == id))
             {
-                var remaining = _pendingOneShots.Where(x => x.Id != id).ToList();
-                
-                _pendingOneShots.Clear();
-                
-                foreach (var ctx in remaining) _pendingOneShots.Enqueue(ctx);
+                var remaining = _oneShotQueue.Where(x => x.Id != id).ToList();
+                _oneShotQueue.Clear();
+                foreach (var ctx in remaining) _oneShotQueue.Enqueue(ctx);
             }
         }
 
@@ -116,31 +120,31 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment
         {
             if (target == null) return;
 
-            var keysToRemove = _permanentMovementsById
+
+            var keysToRemove = _permanentMovements
                 .Select(kvp => kvp.Key)
-                .Where(key => _permanentMovementsById[key].TargetObject.GameObject == target)
+                .Where(key => _permanentMovements[key].TargetObject.GameObject == target)
                 .ToList(); 
 
             foreach (var key in keysToRemove)
             {
-                _permanentMovementsById.Remove(key);
+                _permanentMovements.Remove(key);
             }
             
-            if (_activeOneShotMovement != null && _activeOneShotMovement.Value.TargetObject.GameObject == target)
+            if (_currentOneShot != null && _currentOneShot.Value.TargetObject.GameObject == target)
             {
-                _oneShotCancellation?.Cancel();
-                
-                _activeOneShotMovement = null;
+                _oneShotCts?.Cancel();
+                _currentOneShot = null;
             }
             
-            var queueCount = _pendingOneShots.Count;
+            var queueCount = _oneShotQueue.Count;
             for (int i = 0; i < queueCount; i++)
             {
-                var oneShot = _pendingOneShots.Dequeue();
+                var oneShot = _oneShotQueue.Dequeue();
                 
                 if (oneShot.TargetObject.GameObject != target)
                 {
-                    _pendingOneShots.Enqueue(oneShot);
+                    _oneShotQueue.Enqueue(oneShot);
                 }
             }
         }

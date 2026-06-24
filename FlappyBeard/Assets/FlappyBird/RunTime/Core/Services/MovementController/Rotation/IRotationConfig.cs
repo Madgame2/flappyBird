@@ -7,7 +7,5 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment.Systems
         float MinAngle { get; }
         float MaxAngle { get; }
         float MaxFallSpeed { get; }
-        
-        Vector2 GetVelocity(GameObject target);
     }
 }

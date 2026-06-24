@@ -5,11 +5,11 @@ using UnityEngine;
 public struct MovementContext
 {
     public Guid Id { get;}
-    public GameObject TargetObject { get; }
+    public IMoveable TargetObject { get; }
     public GameObjectType Type { get; }
     public MovementRule[] Rules { get; }
     
-    public MovementContext(GameObject targetObject, GameObjectType type, MovementRule[] rules)
+    public MovementContext(IMoveable targetObject, GameObjectType type, MovementRule[] rules)
     {
         Id = Guid.NewGuid();
         TargetObject = targetObject;

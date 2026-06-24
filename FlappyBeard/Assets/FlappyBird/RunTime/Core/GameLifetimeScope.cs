@@ -10,14 +10,14 @@ using VContainer.Unity;
 
 public class GameLigeTimeScope  : LifetimeScope
 {
-    [SerializeField] private BirdView _birdView;
+    [SerializeField] private BirdView _playerView;
+    [SerializeField] private MovementConfig movementConfig;
     [SerializeField] private LocationPrefabsStorage _prefabsStorage;
     [SerializeField] private ObstacleSpawnPointRoot _obstacleSpawnPointRoot;
-    [FormerlySerializedAs("jumpConfig")] [FormerlySerializedAs("_birdConfig")] [SerializeField] private MovementConfig movementConfig;
     
     protected override void Configure(IContainerBuilder builder)
     {
-        builder.RegisterComponent(_birdView);
+        builder.RegisterComponent(_playerView);
         builder.RegisterComponent(movementConfig);
         builder.RegisterComponent(_obstacleSpawnPointRoot);
         
