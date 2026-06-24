@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DefoultLocationBlocks
   m_EditorClassIdentifier: Assembly-CSharp::PrefabsStorage
   _locationBlocks:
-  - {fileID: 1516295162994628170, guid: 20e433175d0c2274785038cae34bab1d, type: 3}
+  - {fileID: 1516295162994628170, guid: a57690f2951bf8c4b8f5aaa6d4e93c8c, type: 3}

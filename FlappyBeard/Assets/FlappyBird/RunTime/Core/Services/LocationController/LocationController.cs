@@ -5,6 +5,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using FlappyBird.Rintime.Core.Services.BirdMovment;
 using FlappyBird.Rintime.Core.Services.BirdMovment.Meta;
+using FlappyBird.RunTime._Temp;
 using FlappyBird.RunTime.Core.Services.Spawn;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -18,6 +19,7 @@ namespace FlappyBird.RunTime.Core.Services.Location
     {
         private readonly IMovementController _movementController;
         private readonly LocationPrefabsStorage _prefabsStorage;
+        private readonly Transform _spawnRoot;
         private readonly Transform _container;
         
         private readonly Dictionary<LocationBlock, ObjectPool<LocationBlock>> _pools = new();
@@ -26,12 +28,12 @@ namespace FlappyBird.RunTime.Core.Services.Location
         private CancellationTokenSource _cts;
         
         private float spawnInterval = 2f;
-        private Vector3 _spawnPosition;
         
-        public LocationController(LocationPrefabsStorage prefabsStorage, IMovementController movementController)
+        public LocationController(LocationPrefabsStorage prefabsStorage, IMovementController movementController,ObstacleSpawnPointRoot obstacleSpawnPointRoot)
         {
             _prefabsStorage = prefabsStorage;
             _movementController = movementController;
+            _spawnRoot = obstacleSpawnPointRoot.transform;
             
             _container = new GameObject("[Location Container]").transform;
         }
@@ -67,17 +69,21 @@ namespace FlappyBird.RunTime.Core.Services.Location
             var pool = _pools[selectedPrefab];
             var block = pool.Get();
             
-            block.transform.position = _spawnPosition;
+            block.transform.position = _spawnRoot.position;
             _activeBlocks.Add(block);
-
+            
+            
+            var rules = new MovementRule[selectedPrefab.MoveStrategies.Length];
+            
+            for (int i = 0; i < selectedPrefab.MoveStrategies.Length; i++)
+            {
+                var strategy = selectedPrefab.MoveStrategies[i];
+                rules[i] = new MovementRule(strategy.MovementType, strategy.MoveConfig);
+            }
             var blockMovementContext = new MovementContext(
                 block.gameObject,
                 GameObjectType.LocationBlock,
-                new MovementRule[]
-                {
-                    new MovementRule(MovementType.Linear,
-                    )
-                }
+                rules
             );
             _movementController.AddPermanent(blockMovementContext);
         }

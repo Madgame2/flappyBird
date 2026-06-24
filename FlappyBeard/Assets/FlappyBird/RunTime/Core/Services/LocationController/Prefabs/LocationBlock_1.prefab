@@ -137,6 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0d75e22bd7d1443bc8d7f9d838f935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocationBlock
+  _width: 10
+  moveStrateges:
+  - {fileID: 11400000, guid: 491f9531540dbf041a9d75b46131c043, type: 2}
 --- !u!1 &6753224901136349601
 GameObject:
   m_ObjectHideFlags: 0
