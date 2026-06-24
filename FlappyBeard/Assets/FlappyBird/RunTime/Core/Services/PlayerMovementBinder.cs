@@ -35,7 +35,7 @@ public class PlayerMovementBinder : IStartable, IDisposable
         var jumpRule = new MovementRule(MovementType.Jump, _jumpConfig);
         
         var jumpContext = new MovementContext(
-            _birdView.gameObject, 
+            _birdView, 
             GameObjectType.Player, 
             new MovementRule[] { jumpRule }
         );

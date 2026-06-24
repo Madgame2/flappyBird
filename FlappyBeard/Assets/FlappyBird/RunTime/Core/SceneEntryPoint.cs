@@ -19,7 +19,7 @@ public class SceneEntryPoint : IStartable
 
     public void Start()
     {
-        var birdPermanentMovingContext = new MovementContext(_birdView.gameObject,
+        var birdPermanentMovingContext = new MovementContext(_birdView,
             GameObjectType.Player,
             new MovementRule[]
             {
@@ -28,6 +28,7 @@ public class SceneEntryPoint : IStartable
                     _movementConfig
                 )
             });
+        
         _movementController.AddPermanent(birdPermanentMovingContext);
     }
 }

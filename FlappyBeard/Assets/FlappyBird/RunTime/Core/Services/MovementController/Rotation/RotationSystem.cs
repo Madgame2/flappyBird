@@ -16,14 +16,18 @@ public class RotationSystem : IRotationSystem
     }
     
     
-    public void Process(GameObject target, IBaseConfig config)
+    public void Process(IMoveable target, IBaseConfig config)
     {
         if (config is not IRotationConfig rotationConfig)
         {
             return;
         }
 
-        var velocity = rotationConfig.GetVelocity(target);
-        Rotate(target.transform, rotationConfig, velocity);
+        if (target.Rigidbody2D == null)
+        {
+            return;
+        }
+        
+        Rotate(target.Transform, rotationConfig, target.Rigidbody2D.linearVelocity);
     }
 }

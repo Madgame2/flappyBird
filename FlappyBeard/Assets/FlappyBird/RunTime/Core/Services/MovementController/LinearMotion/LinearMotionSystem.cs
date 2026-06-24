@@ -6,7 +6,7 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment.LinearMotion
     public class LinearMotionSystem: ILinearMotionSystem
     {
         public MovementType Type => MovementType.Linear;
-        public void Process(GameObject target, IBaseConfig config)
+        public void Process(IMoveable target, IBaseConfig config)
         {
             if (config is not ILinearConfig linearConfig)
             {
@@ -14,7 +14,7 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment.LinearMotion
             }
             
             Vector3 direction3D = new Vector3(linearConfig.Direction.x, linearConfig.Direction.y, 0f);
-            target.transform.position += direction3D.normalized * linearConfig.Speed * Time.deltaTime;
+            target.Transform.position += direction3D.normalized * linearConfig.Speed * Time.deltaTime;
         }
     }
 }

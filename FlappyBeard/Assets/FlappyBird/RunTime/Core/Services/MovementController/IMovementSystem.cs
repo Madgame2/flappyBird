@@ -6,6 +6,6 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment
     public interface IMovementSystem
     {
         MovementType Type { get; }
-        void Process(GameObject target, IBaseConfig config);
+        void Process(IMoveable target, IBaseConfig config);
     }
 }

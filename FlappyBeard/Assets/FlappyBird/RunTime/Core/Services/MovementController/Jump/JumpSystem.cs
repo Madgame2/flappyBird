@@ -5,27 +5,28 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment.Systems
 {
     public class JumpSystem : IJumpSystem
     {
-        public void Jump(Rigidbody2D rb, float force)
-        {
-            rb.linearVelocity = Vector2.zero;
-
-            rb.AddForce(Vector2.up * force, ForceMode2D.Impulse);
-        }
-
         public MovementType Type =>  MovementType.Jump;
-        public void Process(GameObject target, IBaseConfig config)
+        
+        public void Jump(Rigidbody2D rigidbody, float force)
+        {
+            rigidbody.linearVelocity = Vector2.zero;
+
+            rigidbody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+        }
+        
+        public void Process(IMoveable target, IBaseConfig config)
         {
             if (config is not IJumpConfig jumpConfig)
             {
                 return;
             }
 
-            if (!target.TryGetComponent<Rigidbody2D>(out var rb))
+            if (target.Rigidbody2D == null)
             {
                 return;
             }
             
-            Jump(rb, jumpConfig.JumpForce);
+            Jump(target.Rigidbody2D, jumpConfig.JumpForce);
         }
     }
 }

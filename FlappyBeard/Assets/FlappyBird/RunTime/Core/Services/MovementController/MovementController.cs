@@ -116,36 +116,37 @@ namespace FlappyBird.Rintime.Core.Services.BirdMovment
             }
         }
 
-        public void RemoveAllByTarget(GameObject targetObject)
+        public void RemoveAllByTarget(GameObject target)
         {
-            if (targetObject == null) return;
+            if (target == null) return;
 
-            var permanentKeysToRemove = _permanentMovements
-                .Where(kvp => kvp.Value.TargetObject == targetObject)
+
+            var keysToRemove = _permanentMovements
                 .Select(kvp => kvp.Key)
-                .ToList();
+                .Where(key => _permanentMovements[key].TargetObject.GameObject == target)
+                .ToList(); 
 
-            foreach (var key in permanentKeysToRemove)
+            foreach (var key in keysToRemove)
             {
                 _permanentMovements.Remove(key);
             }
-
-            if (_currentOneShot != null && _currentOneShot.Value.TargetObject == targetObject)
+            
+            if (_currentOneShot != null && _currentOneShot.Value.TargetObject.GameObject == target)
             {
                 _oneShotCts?.Cancel();
                 _currentOneShot = null;
             }
-
-            if (_oneShotQueue.Any(x => x.TargetObject == targetObject))
+            
+            var queueCount = _oneShotQueue.Count;
+            for (int i = 0; i < queueCount; i++)
             {
-                var remainingOneShots = _oneShotQueue.Where(x => x.TargetObject != targetObject).ToList();
-                _oneShotQueue.Clear();
-                foreach (var ctx in remainingOneShots)
+                var oneShot = _oneShotQueue.Dequeue();
+                
+                if (oneShot.TargetObject.GameObject != target)
                 {
-                    _oneShotQueue.Enqueue(ctx);
+                    _oneShotQueue.Enqueue(oneShot);
                 }
             }
-
         }
     }
 }
