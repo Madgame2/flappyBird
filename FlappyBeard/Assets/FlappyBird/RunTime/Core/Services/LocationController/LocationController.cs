@@ -104,10 +104,12 @@ namespace FlappyBird.RunTime.Core.Services.Location
                     actionOnRelease: block => {
                         block.OnRequestRelease -= pool.Release;
                         block.gameObject.SetActive(false);
+                        _movementController.RemoveAllByTarget(block.gameObject);
                     },
                     actionOnDestroy: block => {
                         block.OnRequestRelease -= pool.Release;
                         Object.Destroy(block.gameObject);
+                        _movementController.RemoveAllByTarget(block.gameObject);
                     },
                     collectionCheck: true,
                     defaultCapacity: 2,

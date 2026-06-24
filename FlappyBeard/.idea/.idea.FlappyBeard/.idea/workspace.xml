@@ -13,9 +13,9 @@
     <list default="true" id="bf97469d-037c-46aa-87c6-5d004338480f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlappyBeard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlappyBeard/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/LocationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/LocationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/MovementStrategies/BaseStategy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/MovementStrategies/BaseStategy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/Prefabs/LocationBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/Prefabs/LocationBlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/Prefabs/DefoultLocationBlocks.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/Prefabs/DefoultLocationBlocks.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/Prefabs/LocationBlock_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/Prefabs/LocationBlock_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,61 +53,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000001028664" />
-      <entry key="S30" value="1.0011763093798993" />
-      <entry key="S60" value="1.0685616214368572" />
-      <entry key="M2" value="1.5245452659545093" />
-      <entry key="M5" value="3.0574601453919192" />
-      <entry key="M10" value="6.0764122244113405" />
-      <entry key="M15" value="10.189405039681048" />
-      <entry key="M30" value="29.233984417616302" />
-      <entry key="H1" value="80.76566514897975" />
-      <entry key="H2" value="180.53281042823838" />
-      <entry key="H4" value="310.7040974801127" />
-      <entry key="D1" value="539.0077380455707" />
-      <entry key="W1" value="598.3209135597998" />
+      <entry key="MS100" value="2.921740445594885E-211" />
+      <entry key="MS500" value="7.818587962057032E-43" />
+      <entry key="S2" value="2.973596806155697E-11" />
+      <entry key="S5" value="6.156201588866597E-5" />
+      <entry key="S10" value="0.007846146563844657" />
+      <entry key="S30" value="0.19894332395599917" />
+      <entry key="S60" value="0.47633114041542174" />
+      <entry key="M2" value="1.0178763530063273" />
+      <entry key="M5" value="2.6012535455684076" />
+      <entry key="M10" value="5.60477482226788" />
+      <entry key="M15" value="9.6550854058712" />
+      <entry key="M30" value="28.457166696562243" />
+      <entry key="H1" value="79.68537072098162" />
+      <entry key="H2" value="179.32137270658882" />
+      <entry key="H4" value="309.659876676272" />
+      <entry key="D1" value="538.7053963140319" />
+      <entry key="W1" value="598.2729574809666" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.5741928648997535E-214" />
-      <entry key="S2" value="3.542129907655695E-54" />
-      <entry key="S5" value="4.1658707742539548E-22" />
-      <entry key="S10" value="2.0410464899785977E-11" />
-      <entry key="S30" value="2.7328615622752384E-4" />
-      <entry key="S60" value="0.016531429301928063" />
-      <entry key="M2" value="0.1291518647119654" />
-      <entry key="M5" value="0.6080727975412625" />
-      <entry key="M10" value="2.07847603531872" />
-      <entry key="M15" value="4.208801662276465" />
-      <entry key="M30" value="12.91463156871014" />
-      <entry key="H1" value="34.41118339937703" />
-      <entry key="H2" value="75.88972693593004" />
-      <entry key="H4" value="131.32731685236502" />
-      <entry key="D1" value="231.02204882877356" />
-      <entry key="W1" value="257.2637717114308" />
+      <entry key="MS100" value="1.0000000000000002" />
+      <entry key="MS500" value="1.0006911894399189" />
+      <entry key="S2" value="1.2078715222201035" />
+      <entry key="S5" value="1.774489949740042" />
+      <entry key="S10" value="2.2349419110783595" />
+      <entry key="S30" value="2.7001534380629804" />
+      <entry key="S60" value="2.85092652941964" />
+      <entry key="M2" value="3.0063099417721335" />
+      <entry key="M5" value="3.484956301509822" />
+      <entry key="M10" value="4.9008862852326835" />
+      <entry key="M15" value="6.977239569328254" />
+      <entry key="M30" value="15.566021771339104" />
+      <entry key="H1" value="36.94819059876761" />
+      <entry key="H2" value="78.37911989443266" />
+      <entry key="H4" value="133.88526880942206" />
+      <entry key="D1" value="233.89234986625235" />
+      <entry key="W1" value="260.24313553306257" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0336246488800376E-4" />
-      <entry key="MS500" value="0.1595410961036191" />
-      <entry key="S2" value="0.6320015492264034" />
-      <entry key="S5" value="0.832314109949868" />
-      <entry key="S10" value="0.9123125068564245" />
-      <entry key="S30" value="0.9713027674574708" />
-      <entry key="S60" value="1.0693405828782543" />
-      <entry key="M2" value="1.6438463915559232" />
-      <entry key="M5" value="3.658158697769455" />
-      <entry key="M10" value="8.145296643458607" />
-      <entry key="M15" value="14.385723799728162" />
-      <entry key="M30" value="42.12907710784013" />
-      <entry key="H1" value="115.1503304163226" />
-      <entry key="H2" value="256.3924711509165" />
-      <entry key="H4" value="442.0040091301036" />
-      <entry key="D1" value="770.021086616928" />
-      <entry key="W1" value="855.5832773967633" />
+      <entry key="MS100" value="0.015517070241203688" />
+      <entry key="MS500" value="0.434686607017322" />
+      <entry key="S2" value="0.894123667688259" />
+      <entry key="S5" value="1.460051229092883" />
+      <entry key="S10" value="1.9995710761924468" />
+      <entry key="S30" value="2.7819313741373994" />
+      <entry key="S60" value="3.259840793744556" />
+      <entry key="M2" value="3.9861185765806693" />
+      <entry key="M5" value="6.067016759909581" />
+      <entry key="M10" value="10.49029951289055" />
+      <entry key="M15" value="16.61614141324444" />
+      <entry key="M30" value="44.00198500298138" />
+      <entry key="H1" value="116.60630445118566" />
+      <entry key="H2" value="257.6700810390972" />
+      <entry key="H4" value="443.51755873896866" />
+      <entry key="D1" value="772.5890051815599" />
+      <entry key="W1" value="858.5146787347213" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -228,19 +228,6 @@
           <line>20</line>
           <properties documentPath="E:\Projects\Games\flappyBeard\FlappyBeard\Assets\FlappyBird\RunTime\Core\Services\LocationGeneretion\LocationPrefabsStorage.cs" containingFunctionPresentation="Method 'OnEnable'" />
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/DeadZone.cs</url>
-          <line>6</line>
-          <properties documentPath="E:\Projects\Games\flappyBeard\FlappyBeard\Assets\FlappyBird\RunTime\Core\Services\LocationController\DeadZone.cs" containingFunctionPresentation="Method 'OnTriggerEnter'">
-            <startOffsets>
-              <option value="126" />
-            </startOffsets>
-            <endOffsets>
-              <option value="182" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
