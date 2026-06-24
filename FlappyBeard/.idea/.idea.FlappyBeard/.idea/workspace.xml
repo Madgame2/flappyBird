@@ -10,9 +10,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf97469d-037c-46aa-87c6-5d004338480f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlappyBeard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlappyBeard/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bf97469d-037c-46aa-87c6-5d004338480f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,10 +25,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/41d29b352f6a475ab1bf7c6628b8279046ae00/c9/a13d1e87/Guid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dc764b59c049482b93bebc78a7e33a04212600/81/b4c794ef/Component.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/DeadZone.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/ObstacleSpawnPointRoot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationController/Prefabs/DefoultLocationBlocks.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Meta/BirdConfigs/DefoultConfig.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/MovementController/IBaseConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/MovementController/IMoveable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/MovementController/IMovementSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/MovementController/LinearMotion/ILinearConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/MovementController/LinearMotion/ILinearMotionSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -39,7 +36,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/MovementController/Meta/MovmentsTypes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/MovementController/SystemsRegistry/MovementSystemRegistry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/PlayerMovementBinder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/_Temp/linearConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@c1460d42dff7/Runtime/Internal/ReflectionInjector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@c1460d42dff7/Runtime/Unity/ComponentRegistrationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -49,62 +45,65 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.921740445594885E-211" />
-      <entry key="MS500" value="7.818587962057032E-43" />
-      <entry key="S2" value="2.973596806155697E-11" />
-      <entry key="S5" value="6.156201588866597E-5" />
-      <entry key="S10" value="0.007846146563844657" />
-      <entry key="S30" value="0.19894332395599917" />
-      <entry key="S60" value="0.47633114041542174" />
-      <entry key="M2" value="1.0178763530063273" />
-      <entry key="M5" value="2.6012535455684076" />
-      <entry key="M10" value="5.60477482226788" />
-      <entry key="M15" value="9.6550854058712" />
-      <entry key="M30" value="28.457166696562243" />
-      <entry key="H1" value="79.68537072098162" />
-      <entry key="H2" value="179.32137270658882" />
-      <entry key="H4" value="309.659876676272" />
-      <entry key="D1" value="538.7053963140319" />
-      <entry key="W1" value="598.2729574809666" />
+      <entry key="MS100" value="1.2102241038134287" />
+      <entry key="MS500" value="1.7320428479728127" />
+      <entry key="S2" value="1.9249837977110118" />
+      <entry key="S5" value="1.9694188059414919" />
+      <entry key="S10" value="1.9967840201945921" />
+      <entry key="S30" value="2.3944757520159277" />
+      <entry key="S60" value="3.24709912920143" />
+      <entry key="M2" value="4.890624234751197" />
+      <entry key="M5" value="8.553510708944803" />
+      <entry key="M10" value="12.105503038900034" />
+      <entry key="M15" value="15.536174629727398" />
+      <entry key="M30" value="31.169095898319085" />
+      <entry key="H1" value="75.6326335992604" />
+      <entry key="H2" value="164.6930829891843" />
+      <entry key="H4" value="280.15528577040624" />
+      <entry key="D1" value="477.60967271161" />
+      <entry key="W1" value="527.9691738459777" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000000000000002" />
-      <entry key="MS500" value="1.0006911894399189" />
-      <entry key="S2" value="1.2078715222201035" />
-      <entry key="S5" value="1.774489949740042" />
-      <entry key="S10" value="2.2349419110783595" />
-      <entry key="S30" value="2.7001534380629804" />
-      <entry key="S60" value="2.85092652941964" />
-      <entry key="M2" value="3.0063099417721335" />
-      <entry key="M5" value="3.484956301509822" />
-      <entry key="M10" value="4.9008862852326835" />
-      <entry key="M15" value="6.977239569328254" />
-      <entry key="M30" value="15.566021771339104" />
-      <entry key="H1" value="36.94819059876761" />
-      <entry key="H2" value="78.37911989443266" />
-      <entry key="H4" value="133.88526880942206" />
-      <entry key="D1" value="233.89234986625235" />
-      <entry key="W1" value="260.24313553306257" />
+      <entry key="MS100" value="2.7720343696648013E-265" />
+      <entry key="MS500" value="1.2261955724172865E-53" />
+      <entry key="S2" value="6.005788497520023E-14" />
+      <entry key="S5" value="6.0745800308887875E-6" />
+      <entry key="S10" value="0.003359344078474258" />
+      <entry key="S30" value="0.3084154273937992" />
+      <entry key="S60" value="1.0716105183602689" />
+      <entry key="M2" value="2.050935168054402" />
+      <entry key="M5" value="3.0958631500088205" />
+      <entry key="M10" value="4.433296584278224" />
+      <entry key="M15" value="6.859318200045866" />
+      <entry key="M30" value="17.938810375305113" />
+      <entry key="H1" value="42.84089223904239" />
+      <entry key="H2" value="85.9669498447586" />
+      <entry key="H4" value="139.5870979842028" />
+      <entry key="D1" value="230.60511686433279" />
+      <entry key="W1" value="253.8329104857707" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.015517070241203688" />
-      <entry key="MS500" value="0.434686607017322" />
-      <entry key="S2" value="0.894123667688259" />
-      <entry key="S5" value="1.460051229092883" />
-      <entry key="S10" value="1.9995710761924468" />
-      <entry key="S30" value="2.7819313741373994" />
-      <entry key="S60" value="3.259840793744556" />
-      <entry key="M2" value="3.9861185765806693" />
-      <entry key="M5" value="6.067016759909581" />
-      <entry key="M10" value="10.49029951289055" />
-      <entry key="M15" value="16.61614141324444" />
-      <entry key="M30" value="44.00198500298138" />
-      <entry key="H1" value="116.60630445118566" />
-      <entry key="H2" value="257.6700810390972" />
-      <entry key="H4" value="443.51755873896866" />
-      <entry key="D1" value="772.5890051815599" />
-      <entry key="W1" value="858.5146787347213" />
+      <entry key="MS100" value="1.1305433195026517" />
+      <entry key="MS500" value="1.709198851766233" />
+      <entry key="S2" value="1.9186433808635412" />
+      <entry key="S5" value="1.966809841148999" />
+      <entry key="S10" value="1.9975168552116258" />
+      <entry key="S30" value="2.6831465673759496" />
+      <entry key="S60" value="4.288819597348588" />
+      <entry key="M2" value="6.914143683325966" />
+      <entry key="M5" value="11.63204322325953" />
+      <entry key="M10" value="16.524911014567806" />
+      <entry key="M15" value="22.38040420668034" />
+      <entry key="M30" value="49.087339118258804" />
+      <entry key="H1" value="118.4475089223818" />
+      <entry key="H2" value="250.63119099862584" />
+      <entry key="H4" value="419.7164244987103" />
+      <entry key="D1" value="708.2067270900535" />
+      <entry key="W1" value="781.8007866835463" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
@@ -128,7 +127,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;FB-16-location-generation&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;FB-15-movment-system&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -179,13 +178,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bf97469d-037c-46aa-87c6-5d004338480f" name="Changes" comment="" />
+      <changelist id="9351a8b4-c39e-4a30-93be-72c9fd89c4e2" name="Changes" comment="" />
       <created>1782213907817</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1782213907817</updated>
       <workItem from="1782213908472" duration="16038000" />
-      <workItem from="1782292209765" duration="7974000" />
     </task>
     <servers />
   </component>
