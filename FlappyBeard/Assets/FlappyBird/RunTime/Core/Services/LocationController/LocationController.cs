@@ -93,13 +93,22 @@ namespace FlappyBird.RunTime.Core.Services.Location
             foreach (var prefab in _prefabsStorage.LocationBlocks)
             {
                 var prefabReference = prefab; 
+                ObjectPool<LocationBlock> pool = null;
 
-                var pool = new ObjectPool<LocationBlock>(
+                pool = new ObjectPool<LocationBlock>(
                     createFunc: () => Object.Instantiate(prefabReference, _container),
-            
-                    actionOnGet: block => block.gameObject.SetActive(true),
-                    actionOnRelease: block => block.gameObject.SetActive(false),
-                    actionOnDestroy: block => Object.Destroy(block.gameObject),
+                    actionOnGet: block => {
+                        block.gameObject.SetActive(true);
+                        block.OnRequestRelease += pool.Release;
+                    },
+                    actionOnRelease: block => {
+                        block.OnRequestRelease -= pool.Release;
+                        block.gameObject.SetActive(false);
+                    },
+                    actionOnDestroy: block => {
+                        block.OnRequestRelease -= pool.Release;
+                        Object.Destroy(block.gameObject);
+                    },
                     collectionCheck: true,
                     defaultCapacity: 2,
                     maxSize: 5
