@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8eccb07ca92c3fa47b3f5a2f92d5a27c, type: 3}
-  m_Name: DefoultConfig
-  m_EditorClassIdentifier: Assembly-CSharp::BirdConfig
+  m_Name: PlayerMovementConfig
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementConfig
   _jumpForce: 5
-  _minAngle: -15
-  _maxAngle: 70
+  _minAngle: -45
+  _maxAngle: 30
   _maxFallSpeed: -8
