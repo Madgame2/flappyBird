@@ -43,6 +43,7 @@ namespace FlappyBird.Rintime.Core.Player.Systems
                     var rigidbody = _playerObject.Rigidbody2D;
                         
                     rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, _jumpConfig.JumpForce);
+                   
                     _playerInput.ConsumeJump();
                 }
                 

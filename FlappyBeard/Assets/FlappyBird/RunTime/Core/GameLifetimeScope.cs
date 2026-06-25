@@ -22,7 +22,6 @@ public class GameLigeTimeScope : LifetimeScope
 
         builder.RegisterEntryPoint<PlayerJumpSystem>(Lifetime.Scoped)
             .WithParameter(_playerView);
-
         builder.RegisterEntryPoint<PlayerRotateSystem>(Lifetime.Scoped)
             .WithParameter(_playerView);
     }
