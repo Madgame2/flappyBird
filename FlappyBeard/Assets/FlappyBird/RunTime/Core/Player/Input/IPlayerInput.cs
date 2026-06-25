@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace FlappyBird.Rintime.Core.Player.Input
+namespace FlappyBird.RunTime.Core.Player.Input
 {
     public interface IPlayerInput
     {

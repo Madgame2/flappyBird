@@ -41,59 +41,59 @@
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.000000036526025" />
-      <entry key="S5" value="1.0010593536440562" />
-      <entry key="S10" value="1.032547713346043" />
-      <entry key="S30" value="1.31929155685602" />
-      <entry key="S60" value="1.5696063998870877" />
-      <entry key="M2" value="1.8933047322984828" />
-      <entry key="M5" value="4.775625133201299" />
-      <entry key="M10" value="18.043721032172712" />
-      <entry key="M15" value="35.17573499763726" />
-      <entry key="M30" value="80.18290405542807" />
-      <entry key="H1" value="146.17175186419118" />
-      <entry key="H2" value="249.93354478157931" />
-      <entry key="H4" value="385.83498298780887" />
-      <entry key="D1" value="635.8160330420326" />
-      <entry key="W1" value="702.8512471410652" />
+      <entry key="S2" value="1.000011298572228" />
+      <entry key="S5" value="1.0105005202410382" />
+      <entry key="S10" value="1.1027949840951952" />
+      <entry key="S30" value="1.6760864256067536" />
+      <entry key="S60" value="3.03907099464694" />
+      <entry key="M2" value="5.576277336979713" />
+      <entry key="M5" value="9.330818891390233" />
+      <entry key="M10" value="15.347987227960378" />
+      <entry key="M15" value="25.52917351791087" />
+      <entry key="M30" value="62.896774738472836" />
+      <entry key="H1" value="128.81681012360173" />
+      <entry key="H2" value="235.65758529427697" />
+      <entry key="H4" value="377.2376116650065" />
+      <entry key="D1" value="642.7534387627536" />
+      <entry key="W1" value="714.8901927798022" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="7.323739270709586E-131" />
-      <entry key="MS500" value="9.535550244739441E-27" />
-      <entry key="S2" value="4.200144699224995E-7" />
-      <entry key="S5" value="0.004134797599371795" />
-      <entry key="S10" value="0.09044137450567659" />
-      <entry key="S30" value="0.7116711505216603" />
-      <entry key="S60" value="1.1966386661901556" />
-      <entry key="M2" value="1.668315035537807" />
-      <entry key="M5" value="3.7152106825779523" />
-      <entry key="M10" value="9.980428943681586" />
-      <entry key="M15" value="17.4330097009662" />
-      <entry key="M30" value="37.809661423210905" />
-      <entry key="H1" value="70.30784116071918" />
-      <entry key="H2" value="120.98065841013633" />
-      <entry key="H4" value="185.3632766682663" />
-      <entry key="D1" value="302.1339931383549" />
-      <entry key="W1" value="333.3451669194932" />
+      <entry key="MS100" value="2.5109516482342963E-108" />
+      <entry key="MS500" value="3.0197298231877965E-22" />
+      <entry key="S2" value="4.366803992289469E-6" />
+      <entry key="S5" value="0.010187085629040513" />
+      <entry key="S10" value="0.16729003560650663" />
+      <entry key="S30" value="1.4672975162686395" />
+      <entry key="S60" value="3.186403512015948" />
+      <entry key="M2" value="5.294389339841666" />
+      <entry key="M5" value="7.853230629069373" />
+      <entry key="M10" value="11.221356388393668" />
+      <entry key="M15" value="16.073987486699604" />
+      <entry key="M30" value="33.44221424439334" />
+      <entry key="H1" value="65.66795331659863" />
+      <entry key="H2" value="117.75867269971405" />
+      <entry key="H4" value="184.97756549564286" />
+      <entry key="D1" value="309.2513680135324" />
+      <entry key="W1" value="342.8891121589908" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.4821714897400462E-4" />
-      <entry key="MS500" value="0.1714666610738247" />
-      <entry key="S2" value="0.6434949393303574" />
-      <entry key="S5" value="0.8429391739630351" />
-      <entry key="S10" value="1.0320270409077017" />
-      <entry key="S30" value="1.9845948885114808" />
-      <entry key="S60" value="2.7365769396397" />
-      <entry key="M2" value="3.539264790589455" />
-      <entry key="M5" value="8.461819950554332" />
-      <entry key="M10" value="27.984280573208576" />
-      <entry key="M15" value="52.56361337646626" />
-      <entry key="M30" value="117.94568072564866" />
-      <entry key="H1" value="216.43664138289844" />
-      <entry key="H2" value="370.8756997684505" />
-      <entry key="H4" value="571.1663216206969" />
-      <entry key="D1" value="937.940250792436" />
-      <entry key="W1" value="1036.1948340681379" />
+      <entry key="MS100" value="3.2257630632366314E-5" />
+      <entry key="MS500" value="0.12639401010641302" />
+      <entry key="S2" value="0.596262379508608" />
+      <entry key="S5" value="0.8295679819752373" />
+      <entry key="S10" value="1.1449868776764958" />
+      <entry key="S30" value="3.0435232361005227" />
+      <entry key="S60" value="6.13210371349605" />
+      <entry key="M2" value="10.792880759291414" />
+      <entry key="M5" value="17.13604926619232" />
+      <entry key="M10" value="26.532535013500546" />
+      <entry key="M15" value="41.56637065936358" />
+      <entry key="M30" value="96.29947479295754" />
+      <entry key="H1" value="194.44554439191188" />
+      <entry key="H2" value="353.37935740928884" />
+      <entry key="H4" value="562.1837260254869" />
+      <entry key="D1" value="951.9949077484774" />
+      <entry key="W1" value="1057.777696131158" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -108,30 +108,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;FB-15-movment-system&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "FB-15-movment-system",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="E:\GameEngines\Unity\Unity\6000.3.10f1\Editor\Unity.exe" />
@@ -216,32 +217,6 @@
           <line>20</line>
           <properties documentPath="E:\Projects\Games\flappyBeard\FlappyBeard\Assets\FlappyBird\RunTime\Core\Services\LocationGeneretion\LocationPrefabsStorage.cs" containingFunctionPresentation="Method 'OnEnable'" />
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Player/Systems/PlayerJumpSystem.cs</url>
-          <line>40</line>
-          <properties documentPath="E:\Projects\Games\flappyBeard\FlappyBeard\Assets\FlappyBird\RunTime\Core\Player\Systems\PlayerJumpSystem.cs" containingFunctionPresentation="Method 'JumpLoopAsync'">
-            <startOffsets>
-              <option value="1270" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1303" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Player/Systems/PlayerRotateSystem.cs</url>
-          <line>46</line>
-          <properties documentPath="E:\Projects\Games\flappyBeard\FlappyBeard\Assets\FlappyBird\RunTime\Core\Player\Systems\PlayerRotateSystem.cs" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="1674" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1731" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

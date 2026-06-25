@@ -2,33 +2,36 @@ using System;
 using UnityEngine.InputSystem;
 using VContainer.Unity;
 
-public class InputService: IDisposable, IStartable
+namespace FlappyBird.RunTime.Core.Services
 {
-    private readonly PlayerControls _inputActions;
-    
-    public event Action JumpRequested;
-
-    public InputService(PlayerControls inputActions)
+    public class InputService : IDisposable, IStartable
     {
-        _inputActions = inputActions;
-    }
+        private readonly PlayerControls _inputActions;
 
-    public void Dispose()
-    {
-        _inputActions.Player.Disable();
-        
-        _inputActions.Player.Jump.performed -= OnJumpPerformed;
-    }
+        public event Action OnJumpRequested;
 
-    private void OnJumpPerformed(InputAction.CallbackContext ctx)
-    {
-        JumpRequested?.Invoke();
-    }
+        public InputService(PlayerControls inputActions)
+        {
+            _inputActions = inputActions;
+        }
 
-    public void Start()
-    {
-        _inputActions.Player.Enable();
-        
-        _inputActions.Player.Jump.performed += OnJumpPerformed;
+        public void Dispose()
+        {
+            _inputActions.Player.Disable();
+
+            _inputActions.Player.Jump.performed -= OnJumpPerformed;
+        }
+
+        private void OnJumpPerformed(InputAction.CallbackContext ctx)
+        {
+            OnJumpRequested?.Invoke();
+        }
+
+        public void Start()
+        {
+            _inputActions.Player.Enable();
+
+            _inputActions.Player.Jump.performed += OnJumpPerformed;
+        }
     }
 }

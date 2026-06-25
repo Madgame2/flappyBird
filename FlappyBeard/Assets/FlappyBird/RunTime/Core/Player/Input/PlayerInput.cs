@@ -1,7 +1,7 @@
 using System;
-using UnityEngine;
+using FlappyBird.RunTime.Core.Services;
 
-namespace FlappyBird.Rintime.Core.Player.Input
+namespace FlappyBird.RunTime.Core.Player.Input
 {
     public class PlayerInput: IDisposable, IPlayerInput
     {
@@ -11,12 +11,11 @@ namespace FlappyBird.Rintime.Core.Player.Input
         public PlayerInput(InputService inputService)
         {
             _inputService = inputService;
-            _inputService.JumpRequested += OnJumpRequested;
+            _inputService.OnJumpRequested += OnJumpRequested;
         }
         
         private void OnJumpRequested() => IsJumpRequested = true;
         public void ConsumeJump() => IsJumpRequested = false;
-        
-        public void Dispose() => _inputService.JumpRequested -= OnJumpRequested;
+        public void Dispose() => _inputService.OnJumpRequested -= OnJumpRequested;
     }
 }

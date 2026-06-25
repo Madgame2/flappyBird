@@ -1,20 +1,16 @@
-using System;
-using System.Threading;
-using Cysharp.Threading.Tasks;
-using FlappyBird.Rintime.Core.Player.Input;
 using FlappyBird.RunTime.Core.Movement.Interfaces;
+using FlappyBird.RunTime.Core.Player.Configs;
+using FlappyBird.RunTime.Core.Player.Input;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace FlappyBird.Rintime.Core.Player.Systems
+namespace FlappyBird.RunTime.Core.Player.Systems
 {
-    public class PlayerJumpSystem: IStartable, IDisposable
+    public class PlayerJumpSystem : ITickable
     {
         private readonly IMoveable _playerObject;
         private readonly IPlayerInput _playerInput;
         private readonly PlayerMovementConfig _jumpConfig;
-
-        private CancellationTokenSource _cancellationTokenSource = new();
 
         public PlayerJumpSystem(IMoveable playerObject, IPlayerInput playerInput, PlayerMovementConfig jumpConfig)
         {
@@ -23,32 +19,27 @@ namespace FlappyBird.Rintime.Core.Player.Systems
             _jumpConfig = jumpConfig;
         }
 
-        public void Dispose()
+        public void Tick()
         {
-            _cancellationTokenSource?.Cancel();
-            _cancellationTokenSource?.Dispose();
-        }
-
-        public void Start()
-        {
-            JumpLoopAsync(_cancellationTokenSource.Token).Forget();
-        }
-
-        private async UniTaskVoid JumpLoopAsync(CancellationToken cancellationToken)
-        {
-            while (!cancellationToken.IsCancellationRequested)
+            if (_jumpConfig != null)
             {
-                if (_playerInput.IsJumpRequested)
-                {
-                    var rigidbody = _playerObject.Rigidbody2D;
-                        
-                    rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, _jumpConfig.JumpForce);
-                   
-                    _playerInput.ConsumeJump();
-                }
-                
-                await UniTask.Yield(PlayerLoopTiming.FixedUpdate, cancellationToken);
+                Debug.LogError($"{nameof(_jumpConfig)} is null");
+                return;
             }
+
+            if (_playerObject != null)
+            {
+                Debug.LogError($"{nameof(_playerObject)} is null");
+                return;
+            }
+
+            if (!_playerInput.IsJumpRequested) return;
+            
+            var rigidbody = _playerObject.Rigidbody2D;
+
+            rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, _jumpConfig.JumpForce);
+
+            _playerInput.ConsumeJump();
         }
     }
 }
