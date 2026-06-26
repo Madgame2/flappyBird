@@ -1,6 +1,4 @@
-using FlappyBird.Rintime.Core.Services.BirdMovment;
 using System;
-using FlappyBird.Rintime.Core.Services.BirdMovment.Meta;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using VContainer.Unity;
