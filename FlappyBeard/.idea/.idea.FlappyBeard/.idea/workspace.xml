@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bf97469d-037c-46aa-87c6-5d004338480f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlappyBeard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlappyBeard/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/GameLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/GameLifetimeScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/InputService.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/41d29b352f6a475ab1bf7c6628b8279046ae00/96/981b1f3e/Lazy`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/41d29b352f6a475ab1bf7c6628b8279046ae00/aa/7e73d92f/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/41d29b352f6a475ab1bf7c6628b8279046ae00/c9/a13d1e87/Guid.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/20/d3a6880f/IDisposable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dc764b59c049482b93bebc78a7e33a04212600/81/b4c794ef/Component.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Movement/Interfaces/IMoveable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Player/Input/IPlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Player/Input/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@57d0e36f6123/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@c1460d42dff7/Runtime/Internal/ReflectionInjector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@c1460d42dff7/Runtime/Unity/ComponentRegistrationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000011298572228" />
+      <entry key="S5" value="1.0105005202410382" />
+      <entry key="S10" value="1.1027949840951952" />
+      <entry key="S30" value="1.6760864256067536" />
+      <entry key="S60" value="3.03907099464694" />
+      <entry key="M2" value="5.576277336979713" />
+      <entry key="M5" value="9.330818891390233" />
+      <entry key="M10" value="15.347987227960378" />
+      <entry key="M15" value="25.52917351791087" />
+      <entry key="M30" value="62.896774738472836" />
+      <entry key="H1" value="128.81681012360173" />
+      <entry key="H2" value="235.65758529427697" />
+      <entry key="H4" value="377.2376116650065" />
+      <entry key="D1" value="642.7534387627536" />
+      <entry key="W1" value="714.8901927798022" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="2.5109516482342963E-108" />
+      <entry key="MS500" value="3.0197298231877965E-22" />
+      <entry key="S2" value="4.366803992289469E-6" />
+      <entry key="S5" value="0.010187085629040513" />
+      <entry key="S10" value="0.16729003560650663" />
+      <entry key="S30" value="1.4672975162686395" />
+      <entry key="S60" value="3.186403512015948" />
+      <entry key="M2" value="5.294389339841666" />
+      <entry key="M5" value="7.853230629069373" />
+      <entry key="M10" value="11.221356388393668" />
+      <entry key="M15" value="16.073987486699604" />
+      <entry key="M30" value="33.44221424439334" />
+      <entry key="H1" value="65.66795331659863" />
+      <entry key="H2" value="117.75867269971405" />
+      <entry key="H4" value="184.97756549564286" />
+      <entry key="D1" value="309.2513680135324" />
+      <entry key="W1" value="342.8891121589908" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="3.2257630632366314E-5" />
+      <entry key="MS500" value="0.12639401010641302" />
+      <entry key="S2" value="0.596262379508608" />
+      <entry key="S5" value="0.8295679819752373" />
+      <entry key="S10" value="1.1449868776764958" />
+      <entry key="S30" value="3.0435232361005227" />
+      <entry key="S60" value="6.13210371349605" />
+      <entry key="M2" value="10.792880759291414" />
+      <entry key="M5" value="17.13604926619232" />
+      <entry key="M10" value="26.532535013500546" />
+      <entry key="M15" value="41.56637065936358" />
+      <entry key="M30" value="96.29947479295754" />
+      <entry key="H1" value="194.44554439191188" />
+      <entry key="H2" value="353.37935740928884" />
+      <entry key="H4" value="562.1837260254869" />
+      <entry key="D1" value="951.9949077484774" />
+      <entry key="W1" value="1057.777696131158" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3FXGGbPOE1HGCIgC5SUHLD1jumh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;FB-15-movment-system&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="E:\GameEngines\Unity\Unity\6000.3.10f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath E:\Projects\Games\flappyBeard\FlappyBeard -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="E:\Projects\Games\flappyBeard\FlappyBeard" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="E:\GameEngines\Unity\Unity\6000.3.10f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath E:\Projects\Games\flappyBeard\FlappyBeard -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="E:\Projects\Games\flappyBeard\FlappyBeard" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf97469d-037c-46aa-87c6-5d004338480f" name="Changes" comment="" />
+      <created>1782213907817</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782213907817</updated>
+      <workItem from="1782213908472" duration="16038000" />
+      <workItem from="1782465054725" duration="384000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/LocationGeneretion/LocationPrefabsStorage.cs</url>
+          <line>20</line>
+          <properties documentPath="E:\Projects\Games\flappyBeard\FlappyBeard\Assets\FlappyBird\RunTime\Core\Services\LocationGeneretion\LocationPrefabsStorage.cs" containingFunctionPresentation="Method 'OnEnable'" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -373,7 +373,8 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
-  _birdView: {fileID: 7502185390424753679}
+  _playerView: {fileID: 7502185390424753679}
+  playerMovementConfig: {fileID: 11400000, guid: 520a9987e32d0204a8d3e4b05788508d, type: 2}
 --- !u!4 &933879499
 Transform:
   m_ObjectHideFlags: 0
@@ -473,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c962cdb72439440ae9381077cf4095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BirdView
-  rb: {fileID: 7502185390424753680}
+  _rigidbody2D: {fileID: 7502185390424753680}
 --- !u!50 &7502185390424753680
 Rigidbody2D:
   serializedVersion: 5
