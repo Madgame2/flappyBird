@@ -21,11 +21,11 @@ namespace FlappyBird.Runtime.Core.Location.Systems
         public LocationSpawnSystem(
             ILocationBlockFactory factory,
             DifficultyState difficulty,
-            Transform spawnRoot)
+            ObstacleSpawnPointRoot spawnRoot)
         {
             _factory = factory;
             _difficulty = difficulty;
-            _spawnRoot = spawnRoot;
+            _spawnRoot = spawnRoot.transform;
         }
 
         public void Start()

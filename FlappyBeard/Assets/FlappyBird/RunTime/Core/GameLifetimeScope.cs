@@ -28,7 +28,7 @@ public class GameLigeTimeScope  : LifetimeScope
         builder.Register<LocationBlockPool>(Lifetime.Scoped).AsImplementedInterfaces();
         
         builder.RegisterEntryPoint<LocationSpawnSystem>(Lifetime.Scoped)
-            .WithParameter("spawnRoot", _obstacleSpawnPointRoot.transform);
+            .WithParameter(_obstacleSpawnPointRoot.transform);
         
         builder.RegisterEntryPoint<LocationMovementSystem>(Lifetime.Scoped);
     }

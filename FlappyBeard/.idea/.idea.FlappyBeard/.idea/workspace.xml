@@ -12,26 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bf97469d-037c-46aa-87c6-5d004338480f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlappyBeard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlappyBeard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Difficulty/Systems/DifficultySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Difficulty/Systems/DifficultySystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/GameLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/GameLifetimeScope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Infrastructure/LocationBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Infrastructure/LocationBlock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Infrastructure/LocationBlockPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Infrastructure/LocationBlockPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Infrastructure/LocationPrefabsStorage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Infrastructure/LocationPrefabsStorage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Interfaces/IDisposableBlock.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Interfaces/IDisposableBlock.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Strategies/LinearMoveStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Strategies/LinearMoveStrategy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Strategies/SineMoveStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Strategies/SineMoveStrategy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Systems/LocationMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Systems/LocationMovementSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Systems/LocationSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Location/Systems/LocationSpawnSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/GameObjectType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/GameObjectType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/InputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/SpawnSystem.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/SpawnSystem/ISpawner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/SpawnSystem/ISpawner.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/SpawnSystem/SpawnSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlappyBird/RunTime/Core/Services/SpawnSystem/SpawnSystem.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,61 +53,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="7.178025766108135E-117" />
-      <entry key="S5" value="3.4868367031199264E-47" />
-      <entry key="S10" value="5.987912783263865E-24" />
-      <entry key="S30" value="2.7273898037472516E-8" />
-      <entry key="S60" value="3.184828425906222E-4" />
-      <entry key="M2" value="0.042138667588871845" />
-      <entry key="M5" value="1.0044888238965595" />
-      <entry key="M10" value="3.78847298189769" />
-      <entry key="M15" value="6.723170329582651" />
-      <entry key="M30" value="14.37123737907595" />
-      <entry key="H1" value="30.37334032408522" />
-      <entry key="H2" value="81.61429588972587" />
-      <entry key="H4" value="193.36593412614081" />
-      <entry key="D1" value="489.6468129817987" />
-      <entry key="W1" value="584.2659626896377" />
+      <entry key="MS100" value="1.3014595449251367E-26" />
+      <entry key="MS500" value="6.70912326111028E-6" />
+      <entry key="S2" value="0.06631120148142922" />
+      <entry key="S5" value="0.49258318839492926" />
+      <entry key="S10" value="0.9857232909781579" />
+      <entry key="S30" value="1.577356104259865" />
+      <entry key="S60" value="1.7758047816667342" />
+      <entry key="M2" value="1.8846327034106531" />
+      <entry key="M5" value="2.059132288293972" />
+      <entry key="M10" value="3.2081061546716896" />
+      <entry key="M15" value="5.163156291111916" />
+      <entry key="M30" value="11.87420169007949" />
+      <entry key="H1" value="27.18269798550517" />
+      <entry key="H2" value="76.31794424431139" />
+      <entry key="H4" value="186.5215743951157" />
+      <entry key="D1" value="487.8412339237071" />
+      <entry key="W1" value="585.6150865485492" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000000016345" />
-      <entry key="S10" value="1.0000022408330056" />
-      <entry key="S30" value="1.0370772878061476" />
-      <entry key="S60" value="1.5050468790452063" />
-      <entry key="M2" value="2.9769614221477405" />
-      <entry key="M5" value="5.910723868449798" />
-      <entry key="M10" value="8.579170392179499" />
-      <entry key="M15" value="10.389205761883213" />
-      <entry key="M30" value="14.173155476440986" />
-      <entry key="H1" value="22.097526647267706" />
-      <entry key="H2" value="48.04595676376297" />
-      <entry key="H4" value="102.67115302930219" />
-      <entry key="D1" value="243.90042136783507" />
-      <entry key="W1" value="288.62739978364" />
+      <entry key="MS100" value="1.000000000000001" />
+      <entry key="MS500" value="1.0010351101400363" />
+      <entry key="S2" value="1.179368691825838" />
+      <entry key="S5" value="1.5029197098222418" />
+      <entry key="S10" value="1.7091683226302778" />
+      <entry key="S30" value="1.8917636714396275" />
+      <entry key="S60" value="1.9443522661807682" />
+      <entry key="M2" value="1.9825848869015856" />
+      <entry key="M5" value="2.6134627015080723" />
+      <entry key="M10" value="4.783707962829457" />
+      <entry key="M15" value="6.908599706919163" />
+      <entry key="M30" value="11.744009855105618" />
+      <entry key="H1" value="20.323107766590397" />
+      <entry key="H2" value="45.75131910970408" />
+      <entry key="H4" value="99.97536784694357" />
+      <entry key="D1" value="244.0048479722512" />
+      <entry key="W1" value="290.30587294436384" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.006301888743922862" />
-      <entry key="MS500" value="0.3629895699759736" />
-      <entry key="S2" value="0.7761998180220047" />
-      <entry key="S5" value="0.9036274487054918" />
-      <entry key="S10" value="0.9505953451413152" />
-      <entry key="S30" value="1.0197275135084676" />
-      <entry key="S60" value="1.492736760059077" />
-      <entry key="M2" value="3.0058499352222454" />
-      <entry key="M5" value="6.898241306753202" />
-      <entry key="M10" value="12.348326853786123" />
-      <entry key="M15" value="17.09321721381917" />
-      <entry key="M30" value="28.52782933275869" />
-      <entry key="H1" value="52.456438343523565" />
-      <entry key="H2" value="129.64380561416655" />
-      <entry key="H4" value="296.01822978978686" />
-      <entry key="D1" value="733.5388870515217" />
-      <entry key="W1" value="872.8919178960163" />
+      <entry key="MS100" value="0.018710604759670756" />
+      <entry key="MS500" value="0.45139811889907666" />
+      <entry key="S2" value="0.9593655095729837" />
+      <entry key="S5" value="1.7033007472017585" />
+      <entry key="S10" value="2.457959668335024" />
+      <entry key="S30" value="3.355205913079732" />
+      <entry key="S60" value="3.6574290354859427" />
+      <entry key="M2" value="3.8342320753020602" />
+      <entry key="M5" value="4.657230279095156" />
+      <entry key="M10" value="7.978680786677773" />
+      <entry key="M15" value="12.058113313800964" />
+      <entry key="M30" value="23.604522527057362" />
+      <entry key="H1" value="47.492689409988444" />
+      <entry key="H2" value="122.05371000756762" />
+      <entry key="H4" value="286.47865903735004" />
+      <entry key="D1" value="731.8377514112726" />
+      <entry key="W1" value="875.919509658784" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
