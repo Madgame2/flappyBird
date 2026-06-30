@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace FlappyBird.Runtime.Core.Location.Infrastructure
+namespace FlappyBird.RunTime.Core.Location.Infrastructure
 {
     public class ActiveBlocksRegistry
     {

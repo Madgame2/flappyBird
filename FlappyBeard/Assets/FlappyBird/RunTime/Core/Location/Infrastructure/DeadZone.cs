@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public class DeadZone : MonoBehaviour
+namespace FlappyBird.RunTime.Core.Location.Infrastructure
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    public class DeadZone : MonoBehaviour
     {
-        if (other.TryGetComponent<LocationBlock>(out var block))
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            block.Deactivate(); 
+            if (other.TryGetComponent<LocationBlock>(out var block))
+            {
+                block.Deactivate(); 
+            }
         }
     }
 }

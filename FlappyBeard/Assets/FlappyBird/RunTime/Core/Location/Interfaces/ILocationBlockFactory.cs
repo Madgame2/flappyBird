@@ -1,6 +1,7 @@
+using FlappyBird.RunTime.Core.Location.Infrastructure;
 using UnityEngine;
 
-namespace FlappyBird.Runtime.Core.Location.Interfaces
+namespace FlappyBird.RunTime.Core.Location.Interfaces
 {
     public interface ILocationBlockFactory
     {

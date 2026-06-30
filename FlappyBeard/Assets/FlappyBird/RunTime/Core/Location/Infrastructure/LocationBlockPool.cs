@@ -1,26 +1,32 @@
 using System;
-using UnityEngine;
 using System.Collections.Generic;
-using FlappyBird.Runtime.Core.Location.Interfaces;
+using FlappyBird.RunTime.Core.Location.Configs;
+using FlappyBird.RunTime.Core.Location.Interfaces;
+using UnityEngine;
 using UnityEngine.Pool;
+using VContainer;
+using VContainer.Unity;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
-namespace FlappyBird.Runtime.Core.Location.Infrastructure
+namespace FlappyBird.RunTime.Core.Location.Infrastructure
 {
     public sealed class LocationBlockPool : ILocationBlockFactory, IDisposable
     {
         private readonly LocationPrefabsStorage _prefabStorage;
         private readonly ActiveBlocksRegistry _activeBlocksRegistry;
+        private readonly IObjectResolver _objectResolver;
         private readonly Dictionary<LocationBlock, ObjectPool<LocationBlock>> _pools = new();
         private Transform _poolContainer;
         
         public LocationBlockPool(
             ActiveBlocksRegistry activeBlocksRegistry,
-            LocationPrefabsStorage prefabStorage)
+            LocationPrefabsStorage prefabStorage,
+            IObjectResolver objectResolver)
         {
             _activeBlocksRegistry = activeBlocksRegistry;
             _prefabStorage = prefabStorage;
+            _objectResolver = objectResolver;
         }
 
         public void Initialize()
@@ -81,7 +87,7 @@ namespace FlappyBird.Runtime.Core.Location.Infrastructure
             LocationBlock prefab,
             ObjectPool<LocationBlock> pool)
         {
-            var block = Object.Instantiate(prefab, _poolContainer);
+            var block = _objectResolver.Instantiate(prefab, _poolContainer);
 
             block.Initialize(pool.Release);
 

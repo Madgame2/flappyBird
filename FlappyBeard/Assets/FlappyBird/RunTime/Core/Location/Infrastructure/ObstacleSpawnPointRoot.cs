@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public class ObstacleSpawnPointRoot : MonoBehaviour
+namespace FlappyBird.RunTime.Core.Location.Infrastructure
 {
+    public class ObstacleSpawnPointRoot : MonoBehaviour
+    {
 
+    }
 }

@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 5426717012515461943}
   - component: {fileID: 6408100569444171827}
   - component: {fileID: 1015572518196130304}
+  - component: {fileID: 1914966620077720386}
   m_Layer: 0
   m_Name: LocationBlock_2
   m_TagString: Untagged
@@ -218,11 +219,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -4.247842, y: -4.8006077}
+  m_Offset: {x: -4.247842, y: 2.140831}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -232,7 +233,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.2356834, y: 5.579399}
+  m_Size: {x: 1.2356834, y: 19.462275}
   m_EdgeRadius: 0
 --- !u!50 &1015572518196130304
 Rigidbody2D:
@@ -261,3 +262,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1914966620077720386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3569146508880751226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a1de114723e5545acfb8651e7436c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreTrigger

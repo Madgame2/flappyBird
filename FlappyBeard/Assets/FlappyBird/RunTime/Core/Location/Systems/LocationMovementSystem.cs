@@ -1,10 +1,9 @@
-using FlappyBird.RunTime.Core;
 using FlappyBird.RunTime.Core.Difficulty.Data;
-using FlappyBird.Runtime.Core.Location.Infrastructure;
+using FlappyBird.RunTime.Core.Location.Infrastructure;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace FlappyBird.Runtime.Core.Location.Systems
+namespace FlappyBird.RunTime.Core.Location.Systems
 {
     public class LocationMovementSystem : IFixedTickable
     {
