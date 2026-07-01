@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using FlappyBird.RunTime.Core.Services.ScenesService.Interfaces;
 using FlappyBird.RunTime.Core.Services.UI.Interfaces;
 using FlappyBird.RunTime.Core.Services.UI.View;
@@ -9,21 +10,22 @@ namespace FlappyBird.RunTime.Core.Services.UI.Presenters
 {
     public class PausePresenter : IInitializable, IDisposable
     {
-        private readonly IUIManager _uiManager;
+        private readonly IUIService _uiService;
         private readonly InputService _inputService;
         private readonly ISceneService _sceneService;
         private readonly IDialogService _dialogService;
+        private CancellationTokenSource _sceneCts;
 
         private PauseMenuView _view;
         private bool _isOpen;
 
         public PausePresenter(
-            IUIManager uiManager,
+            IUIService uiService,
             InputService inputService,
             ISceneService sceneService,
             IDialogService dialogService)
         {
-            _uiManager = uiManager;
+            _uiService = uiService;
             _inputService = inputService;
             _sceneService = sceneService;
             _dialogService = dialogService;
@@ -58,7 +60,7 @@ namespace FlappyBird.RunTime.Core.Services.UI.Presenters
 
         private void OpenPause()
         {
-            _view = _uiManager.Open<PauseMenuView>("PauseMenu");
+            _view = _uiService.Open<PauseMenuView>("PauseMenu");
 
             _view.ResumeClicked += OnResume;
             _view.MenuClicked += OnMenu;
@@ -72,7 +74,7 @@ namespace FlappyBird.RunTime.Core.Services.UI.Presenters
         {
             Unsubscribe();
 
-            _uiManager.Close("PauseMenu");
+            _uiService.Close("PauseMenu");
 
             Time.timeScale = 1f;
             _isOpen = false;
@@ -98,8 +100,23 @@ namespace FlappyBird.RunTime.Core.Services.UI.Presenters
             if (!result)
                 return;
 
+            _sceneCts?.Cancel();
+            _sceneCts = new CancellationTokenSource();
+
             Time.timeScale = 1f;
-            await _sceneService.LoadScene("MenuScene");
+
+            try
+            {
+                await _sceneService.LoadScene("MenuScene", _sceneCts.Token);
+            }
+            catch (OperationCanceledException)
+            {
+                Debug.Log("Возврат в главное меню был отменен.");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Ошибка при возврате в меню: {ex.Message}");
+            }
         }
 
         private async void OnExit()

@@ -6,6 +6,7 @@ using FlappyBird.RunTime.Core.Location.Systems;
 using FlappyBird.RunTime.Core.Player.Configs;
 using FlappyBird.RunTime.Core.Player.Input;
 using FlappyBird.RunTime.Core.Player.Systems;
+using FlappyBird.RunTime.Core.Services.Score;
 using FlappyBird.RunTime.Core.Services.UI.Components;
 using FlappyBird.RunTime.Core.Services.UI.Presenters;
 using FlappyBird.RunTime.Core.View;
@@ -39,7 +40,7 @@ namespace FlappyBird.RunTime.Core.Scopes
             builder.RegisterEntryPoint<SceneUiInitializer>();
             builder.RegisterEntryPoint<PausePresenter>();
             builder.RegisterEntryPoint<ScorePresenter>();
-
+            builder.RegisterEntryPoint<ScoreSystem>();
             
             builder.Register<PlayerInput>(Lifetime.Singleton).AsImplementedInterfaces();
 

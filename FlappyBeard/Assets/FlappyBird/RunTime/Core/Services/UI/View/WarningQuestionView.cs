@@ -1,4 +1,6 @@
 using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using FlappyBird.RunTime.Core.Services.UI.Components;
 using TMPro;
 using UnityEngine;
@@ -12,18 +14,19 @@ namespace FlappyBird.RunTime.Core.Services.UI.View
         [SerializeField] private Button _yesButton;
         [SerializeField] private Button _noButton;
 
-        public event Action Accepted;
-        public event Action Rejected;
-
-        private void Awake()
-        {
-            _yesButton.onClick.AddListener(() => Accepted?.Invoke());
-            _noButton.onClick.AddListener(() => Rejected?.Invoke());
-        }
-
         public void SetMessage(string message)
         {
             _message.text = message;
+        }
+        
+        public async UniTask<bool> WaitForDecisionAsync(CancellationToken ct = default)
+        {
+            int index = await UniTask.WhenAny(
+                _yesButton.OnClickAsync(ct),
+                _noButton.OnClickAsync(ct)
+            );
+
+            return index == 0;
         }
     }
 }

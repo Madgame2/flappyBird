@@ -8,20 +8,20 @@ namespace FlappyBird.RunTime.Core.Services.UI.Presenters
 {
     public class ScorePresenter : IInitializable, IDisposable
     {
-        private readonly IUIManager _uiManager;
+        private readonly IUIService _uiService;
         private readonly ScoreService _scoreService;
 
         private ScoreView _view;
 
-        public ScorePresenter(IUIManager uiManager, ScoreService scoreService)
+        public ScorePresenter(IUIService uiService, ScoreService scoreService)
         {
-            _uiManager = uiManager;
+            _uiService = uiService;
             _scoreService = scoreService;
         }
 
         public void Initialize()
         {
-            _view = _uiManager.Open<ScoreView>("ScoreUI");
+            _view = _uiService.Open<ScoreView>("ScoreUI");
 
             _view.SetScore(_scoreService.Score);
 

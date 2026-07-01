@@ -3,7 +3,7 @@ using VContainer;
 
 namespace FlappyBird.RunTime.Core.Services.UI.Interfaces
 {
-    public interface IUIManager
+    public interface IUIService
     {
         void SetUIRoot(UiRoot uiRoot);
         void ClearUIRoot();
@@ -12,6 +12,5 @@ namespace FlappyBird.RunTime.Core.Services.UI.Interfaces
         void CloseTop();
         void Close(string windowId);
         void CloseAll();
-        void SetSceneResolver(IObjectResolver objectResolver);
     }
 }

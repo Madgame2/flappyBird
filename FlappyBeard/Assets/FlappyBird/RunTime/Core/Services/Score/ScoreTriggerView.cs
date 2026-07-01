@@ -1,12 +1,16 @@
+using System;
+using FlappyBird.RunTime.Core.View;
 using UnityEngine;
 using VContainer;
 
 namespace FlappyBird.RunTime.Core.Services.Score
 {
-    public class ScoreTrigger : MonoBehaviour
+    public class ScoreTriggerView : MonoBehaviour
     {
         private ScoreService _scoreService;
 
+        public event Action OnPlayerPassed;
+        
         [Inject]
         public void Construct(ScoreService scoreService)
         {
@@ -15,9 +19,9 @@ namespace FlappyBird.RunTime.Core.Services.Score
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Player"))
+            if (other.TryGetComponent<BirdView>(out _))
             {
-                _scoreService.AddPoint();
+                OnPlayerPassed.Invoke();
             }
         }
     }

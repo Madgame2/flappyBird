@@ -1,28 +1,31 @@
 using System;
+using System.Threading;
 using FlappyBird.RunTime.Core.Services.ScenesService.Interfaces;
 using FlappyBird.RunTime.Core.Services.UI.Interfaces;
 using FlappyBird.RunTime.Core.Services.UI.View;
+using UnityEngine;
 using VContainer.Unity;
 
 namespace FlappyBird.RunTime.Core.Services.UI.Presenters
 {
-    public class MainMenuPresenter :IStartable, IDisposable
+    public class MainMenuPresenter : IStartable, IDisposable
     {
-        private readonly IUIManager _uiManager;
-        private  MainMenuView _view;
+        private readonly IUIService _uiService;
         private readonly IDialogService _dialogService;
         private readonly ISceneService _sceneService;
-    
-        public MainMenuPresenter(IUIManager uiManager, IDialogService dialogService, ISceneService sceneService)
+        private CancellationTokenSource _sceneCts;
+        private MainMenuView _view;
+
+        public MainMenuPresenter(IUIService uiService, IDialogService dialogService, ISceneService sceneService)
         {
-            _uiManager = uiManager;
+            _uiService = uiService;
             _dialogService = dialogService;
             _sceneService = sceneService;
         }
 
         public void Start()
         {
-            _view = _uiManager.Open<MainMenuView>("MainMenu");
+            _view = _uiService.Open<MainMenuView>("MainMenu");
 
             _view.OnPlayClicked += HandlePlay;
             _view.OnExitClicked += HandleExit;
@@ -30,7 +33,21 @@ namespace FlappyBird.RunTime.Core.Services.UI.Presenters
 
         private async void HandlePlay()
         {
-            await _sceneService.LoadScene("GameScene");
+            _sceneCts?.Cancel();
+            _sceneCts = new CancellationTokenSource();
+
+            try
+            {
+                await _sceneService.LoadScene("GameScene", _sceneCts.Token);
+            }
+            catch (OperationCanceledException)
+            {
+                Debug.Log("Загрузка GameScene была отменена.");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Ошибка при переходе в игру: {ex.Message}");
+            }
         }
 
         private async void HandleExit()

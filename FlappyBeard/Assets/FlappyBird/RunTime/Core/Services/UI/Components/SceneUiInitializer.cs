@@ -8,25 +8,24 @@ namespace FlappyBird.RunTime.Core.Services.UI.Components
     public class SceneUiInitializer: IInitializable, IDisposable
     {
         private UiRoot _uiRoot;
-        private IUIManager _uiManager;
+        private IUIService _uiService;
         private IObjectResolver _objectResolver;
 
-        public SceneUiInitializer(UiRoot uiRoot, IUIManager uiManager, IObjectResolver objectResolver)
+        public SceneUiInitializer(UiRoot uiRoot, Interfaces.IUIService uiService, IObjectResolver objectResolver)
         {
             _uiRoot = uiRoot;
-            _uiManager = uiManager;
+            _uiService = uiService;
             _objectResolver = objectResolver;
         }
     
         public void Initialize()
         {
-            _uiManager.SetUIRoot(_uiRoot);
-            _uiManager.SetSceneResolver(_objectResolver);
+            _uiService.SetUIRoot(_uiRoot);
         }
 
         public void Dispose()
         {
-            _uiManager.ClearUIRoot();
+            _uiService.ClearUIRoot();
         }
     }
 }

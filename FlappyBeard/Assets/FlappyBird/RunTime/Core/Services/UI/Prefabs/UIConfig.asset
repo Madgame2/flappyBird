@@ -12,19 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc72fc828a97424d955d82b3865876d, type: 3}
   m_Name: UIConfig
   m_EditorClassIdentifier: Assembly-CSharp::UIConfig
-  Windows:
+  _windows:
+  - ID: ScoreUI
+    Layer: 0
+    Prefab: {fileID: 7142164576456493033, guid: 7643570c1cf1b07479aa640b0468fe9a, type: 3}
+  - ID: PauseMenu
+    Layer: 1
+    Prefab: {fileID: 4015258510364615386, guid: 353ca42a4d43bf540b53347b53cc10ec, type: 3}
   - ID: MainMenu
     Layer: 0
     Prefab: {fileID: 5883545118038538617, guid: c0b7a311584f6b24baaa9ff0ab392d62, type: 3}
   - ID: WarningQuestion
     Layer: 1
     Prefab: {fileID: 5404670492194339588, guid: dd11580bac1dadf408e6dcd06df40017, type: 3}
-  - ID: ScoreUI
-    Layer: 0
-    Prefab: {fileID: 7142164576456493033, guid: 7643570c1cf1b07479aa640b0468fe9a, type: 3}
-  - ID: GameOverScrean
-    Layer: 1
-    Prefab: {fileID: 7069673461491578918, guid: bac6c9a3b468e6e4186db025ec8cbafe, type: 3}
-  - ID: PauseMenu
-    Layer: 1
-    Prefab: {fileID: 4015258510364615386, guid: 353ca42a4d43bf540b53347b53cc10ec, type: 3}

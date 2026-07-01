@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 1516295162994628170}
   - component: {fileID: 2479492454464263564}
   - component: {fileID: 8772648233581230203}
-  - component: {fileID: -8168463440255726135}
+  - component: {fileID: 7057240935397818110}
   m_Layer: 0
   m_Name: LocationBlock_1
   m_TagString: Untagged
@@ -264,7 +264,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-8168463440255726135
+--- !u!114 &7057240935397818110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,9 +273,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4195012192281659720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21a1de114723e5545acfb8651e7436c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 20ec1a82e4b044748d369133b414ecaf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScoreTrigger
+  m_EditorClassIdentifier: Assembly-CSharp::FlappyBird.RunTime.Core.Services.Score.ScoreZoneView
 --- !u!1 &6753224901136349601
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,13 @@ using FlappyBird.RunTime.Core.Services.ScenesService.Infrastructure;
 using FlappyBird.RunTime.Core.Services.ScenesService.Interfaces;
 using FlappyBird.RunTime.Core.Services.Score;
 using FlappyBird.RunTime.Core.Services.UI.Components;
+using FlappyBird.RunTime.Core.Services.UI.Factory;
+using FlappyBird.RunTime.Core.Services.UI.Interfaces;
 using FlappyBird.RunTime.Core.Services.UI.Meta;
+using FlappyBird.RunTime.Core.Services.UI.Presenters;
+using FlappyBird.RunTime.Core.Services.UI.Provider;
+using FlappyBird.RunTime.Core.Services.UI.Repository;
+using FlappyBird.RunTime.Core.Services.UI.Routers;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -22,8 +28,18 @@ namespace FlappyBird.RunTime.Core.Scopes
                 .As<ISceneService>();
 
             builder.Register<ScoreService>(Lifetime.Singleton);
-        
-            builder.Register<UIManager>(Lifetime.Singleton).AsImplementedInterfaces();
+
+            builder.Register<UIService>(Lifetime.Singleton).As<IUIService>();
+
+            builder.Register<UIWindowFactory>(Lifetime.Singleton);
+
+            builder.Register<UIWindowRepository>(Lifetime.Singleton);
+
+            builder.Register<UIPopupRouter>(Lifetime.Singleton);
+
+            builder.Register<UIWindowPresenter>(Lifetime.Singleton);
+
+            builder.Register<UIRootProvider>(Lifetime.Singleton);
             builder.Register<DialogService>(Lifetime.Transient).AsImplementedInterfaces();
         
             builder.Register<PlayerControls>(Lifetime.Singleton);
