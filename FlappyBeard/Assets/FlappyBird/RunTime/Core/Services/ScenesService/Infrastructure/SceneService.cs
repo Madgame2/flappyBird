@@ -9,6 +9,8 @@ namespace FlappyBird.RunTime.Core.Services.ScenesService.Infrastructure
 {
     public class SceneService : ISceneService
     {
+        private ISceneService _sceneServiceImplementation;
+
         public async UniTask LoadScene(string sceneName, CancellationToken token = default)
         {
             try
@@ -25,6 +27,26 @@ namespace FlappyBird.RunTime.Core.Services.ScenesService.Infrastructure
             catch (Exception ex)
             {
                 Debug.LogError($"Ошибка при загрузке сцены {sceneName}: {ex.Message}");
+                throw;
+            }
+        }
+
+        public async UniTask ReloadScene(CancellationToken token = default)
+        {
+            try
+            {
+                string currentSceneName = SceneManager.GetActiveScene().name;
+            
+                await LoadScene(currentSceneName, token);
+            }
+            catch (OperationCanceledException)
+            {
+                Debug.Log("Перезагрузка текущей сцены была отменена.");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Ошибка при перезагрузке текущей сцены: {ex.Message}");
                 throw;
             }
         }

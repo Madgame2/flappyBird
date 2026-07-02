@@ -327,7 +327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5457433595290283658}
-  - component: {fileID: 7069673461491578918}
+  - component: {fileID: 4542861397112842696}
   m_Layer: 5
   m_Name: GameOverScrean
   m_TagString: Untagged
@@ -356,7 +356,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7069673461491578918
+--- !u!114 &4542861397112842696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -365,9 +365,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2048906618789582288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e16d0389b7792e4eaa513a24e580dd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 2afaf1d6a61744ea8730c566df5b0e41, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIElement
+  m_EditorClassIdentifier: Assembly-CSharp::FlappyBird.RunTime.Core.Services.UI.View.GameOverView
+  _scoreText: {fileID: 8170063901228829182}
+  _bestScoreText: {fileID: 8241531228614317354}
+  _restartButton: {fileID: 3734057696482782428}
+  _homeButton: {fileID: 1013985463796407701}
 --- !u!1 &2386056768046957631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Score
+  m_text: "Best \nscore"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1093,7 +1097,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 56
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1910,7 +1914,7 @@ MonoBehaviour:
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
-  m_FlexibleWidth: 1
+  m_FlexibleWidth: 0.19
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!114 &6015672672628026707
@@ -2004,7 +2008,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'MENU
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}

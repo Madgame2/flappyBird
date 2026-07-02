@@ -19,6 +19,7 @@ namespace FlappyBird.RunTime.Core.Scopes
     public class GameLifeTimeScope : LifetimeScope
     {
         [SerializeField] private BirdView _playerView;
+        [SerializeField] private CollisionDetection _playerColitsionDetection;
         [SerializeField] private PlayerMovementConfig _playerMovementConfig;
         [SerializeField] private LocationPrefabsStorage _prefabsStorage;
 	    [SerializeField] private ObstacleSpawnPointRoot _obstacleSpawnPointRoot;
@@ -29,6 +30,7 @@ namespace FlappyBird.RunTime.Core.Scopes
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterComponent(_playerView).AsImplementedInterfaces().AsSelf();
+            builder.RegisterComponent(_playerColitsionDetection);
             builder.RegisterComponent(_obstacleSpawnPointRoot);
 	        builder.RegisterComponent(_prefabsStorage);
 	        builder.RegisterComponent(_uiRoot);
@@ -40,6 +42,7 @@ namespace FlappyBird.RunTime.Core.Scopes
             builder.RegisterEntryPoint<SceneUiInitializer>();
             builder.RegisterEntryPoint<PausePresenter>();
             builder.RegisterEntryPoint<ScorePresenter>();
+            builder.Register<GameOverPresenter>(Lifetime.Scoped);
             builder.RegisterEntryPoint<ScoreSystem>();
             
             builder.Register<PlayerInput>(Lifetime.Singleton).AsImplementedInterfaces();
@@ -56,10 +59,11 @@ namespace FlappyBird.RunTime.Core.Scopes
         	
         	builder.Register<LocationBlockPool>(Lifetime.Scoped).AsImplementedInterfaces();
         	
-        	builder.RegisterEntryPoint<LocationSpawnSystem>(Lifetime.Scoped)
+        	builder.Register<LocationSpawnSystem>(Lifetime.Scoped).AsImplementedInterfaces()
             	.WithParameter(_obstacleSpawnPointRoot.transform);
             	
-            builder.RegisterEntryPoint<LocationMovementSystem>(Lifetime.Scoped);
+            builder.Register<LocationMovementSystem>(Lifetime.Scoped).AsImplementedInterfaces();
+            builder.RegisterEntryPoint<GameOverCoordinator>();
         }
     }
 }

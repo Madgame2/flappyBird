@@ -6,5 +6,6 @@ namespace FlappyBird.RunTime.Core.Services.ScenesService.Interfaces
     public interface ISceneService
     {
         UniTask LoadScene(string sceneName, CancellationToken token = default);
+        UniTask ReloadScene(CancellationToken token = default);
     }
 }
