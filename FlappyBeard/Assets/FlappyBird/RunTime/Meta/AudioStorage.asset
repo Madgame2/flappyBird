@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6283751dce48e15498110634849aa929, type: 3}
+  m_Name: AudioStorage
+  m_EditorClassIdentifier: Assembly-CSharp::AudioStorage
+  _jumpSound: {fileID: 8300000, guid: 12c8bc8f346da6d47b98d68a47cf6048, type: 3}
+  _pointSound: {fileID: 8300000, guid: a206bc5c51e762b4ebe9f6e3e8fab845, type: 3}
+  _hitSound: {fileID: 8300000, guid: bd5863805c6ee004aab8d129c3dbb8a4, type: 3}

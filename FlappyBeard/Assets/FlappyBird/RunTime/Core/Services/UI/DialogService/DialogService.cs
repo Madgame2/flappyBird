@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 using FlappyBird.RunTime.Core.Services.UI.Interfaces;
 using FlappyBird.RunTime.Core.Services.UI.View;
 
-namespace FlappyBird.RunTime.Core.Services.UI.Components
+namespace FlappyBird.RunTime.Core.Services.UI.DialogService
 {
     public class DialogService : IDialogService
     {

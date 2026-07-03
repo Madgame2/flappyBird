@@ -1,26 +1,34 @@
 using System;
-using FlappyBird.RunTime.Core.Player.CollisionDetection.Components;
+using FlappyBird.RunTime.Core.Player.CollitionDetection.Components;
 using UnityEngine;
 
-public class CollisionDetection : MonoBehaviour
+namespace FlappyBird.RunTime.Core.Player.CollitionDetection
 {
-    public event Action OnPlayerHit;
-    
-    private void OnCollisionEnter2D(Collision2D collision)
+    public class CollisionDetection : MonoBehaviour
     {
-        HandleDeath();
-    }
+        private bool _collided = false;
+        public event Action OnPlayerHit;
 
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.TryGetComponent<Obstacle>(out _))
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            HandleDeath();
+            if (!_collided)
+            {
+                HandleDeath();
+            }
         }
-    }
-    
-    private void HandleDeath()
-    {
-        OnPlayerHit?.Invoke();
+
+        private void OnTriggerEnter2D(Collider2D collider)
+        {
+            if (!_collided && collider.TryGetComponent<Obstacle>(out _))
+            {
+                HandleDeath();
+            }
+        }
+
+        private void HandleDeath()
+        {
+            _collided = true;
+            OnPlayerHit?.Invoke();
+        }
     }
 }
