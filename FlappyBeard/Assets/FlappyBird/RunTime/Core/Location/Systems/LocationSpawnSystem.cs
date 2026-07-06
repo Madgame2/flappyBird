@@ -9,7 +9,7 @@ using VContainer.Unity;
 
 namespace FlappyBird.RunTime.Core.Location.Systems
 {
-    public class LocationSpawnSystem : IStartable, IDisposable, IGameControllable
+    public class LocationSpawnSystem : IStartable, IDisposable, IStopGameControllable
     {
         private readonly ILocationBlockFactory _factory;
         private readonly DifficultyState _difficulty;
@@ -27,7 +27,7 @@ namespace FlappyBird.RunTime.Core.Location.Systems
             _spawnRoot = spawnRoot.transform;
         }
         
-        void IGameControllable.Stop()
+        void IStopGameControllable.Stop()
         {
             _isMoving = false;
         }

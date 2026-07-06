@@ -16,6 +16,7 @@ using FlappyBird.RunTime.Core.Services.UI.Components;
 using FlappyBird.RunTime.Core.Services.UI.Presenters;
 using FlappyBird.RunTime.Core.View;
 using UnityEngine;
+using UnityEngine.Serialization;
 using VContainer;
 using VContainer.Unity;
 
@@ -29,7 +30,7 @@ namespace FlappyBird.RunTime.Core.Scopes
         [SerializeField] private LocationPrefabsStorage _prefabsStorage;
         [SerializeField] private ObstacleSpawnPointRoot _obstacleSpawnPointRoot;
         [SerializeField] private CoreGameplayConfig _gameplayConfig;
-        [SerializeField] private ParallaxController parallaxController;
+        [SerializeField] private ParallaxController _parallaxController;
         [SerializeField] private AudioStorage _audioStorage;
 
         [SerializeField] private UiRoot _uiRoot;
@@ -41,7 +42,7 @@ namespace FlappyBird.RunTime.Core.Scopes
             builder.RegisterComponent(_obstacleSpawnPointRoot);
             builder.RegisterComponent(_prefabsStorage);
             builder.RegisterComponent(_uiRoot);
-            builder.RegisterComponent(parallaxController).AsImplementedInterfaces();
+            builder.RegisterComponent(_parallaxController).AsImplementedInterfaces();
 
             builder.RegisterInstance(_audioStorage);
             builder.RegisterInstance(_playerMovementConfig);

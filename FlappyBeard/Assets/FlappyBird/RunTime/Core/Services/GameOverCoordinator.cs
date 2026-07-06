@@ -10,13 +10,12 @@ namespace FlappyBird.RunTime.Core.Services
     {
         private readonly CollisionDetection _player;
         private readonly GameOverPresenter _gameOverPresenter;
-        private IReadOnlyList<IGameControllable> _gameControllables;
-
+        private IReadOnlyList<IStopGameControllable> _gameControllables;
 
         public GameOverCoordinator(
             CollisionDetection player,
             GameOverPresenter gameOverPresenter,
-            IReadOnlyList<IGameControllable> gameControllables
+            IReadOnlyList<IStopGameControllable> gameControllables
         )
         {
             _player = player;

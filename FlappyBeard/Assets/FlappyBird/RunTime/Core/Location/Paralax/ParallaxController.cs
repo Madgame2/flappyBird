@@ -3,21 +3,30 @@ using UnityEngine;
 
 namespace FlappyBird.RunTime.Core.Location.Paralax
 {
-    public class ParallaxController : MonoBehaviour, IGameControllable
+    public class ParallaxController : MonoBehaviour, IStopGameControllable
     {
-        public enum MoveDirection { Left, Right }
+        private enum MoveDirection { Left, Right }
     
-        public float gameSpeed = 5f;
+        [SerializeField] private float _baselayerSpeed = 5f;
 
         [Tooltip("В какую сторону летят декорации фона (обычно Left, чтобы птица казалась летящей вправо)")]
         [SerializeField] private MoveDirection movementDirection = MoveDirection.Left;
 
         private List<ParallaxLayer> parallaxLayers = new List<ParallaxLayer>();
         private Vector3 directionVector;
-        private IGameControllable _gameControllableImplementation;
         private bool _isRunning = true;
 
-        void Start()
+        void IStopGameControllable.Stop()
+        {
+            _isRunning = false;
+        }
+        
+        public void UpdateBaseSpeed(float newSpeed)
+        {
+            _baselayerSpeed = newSpeed;
+        }
+        
+        private void Start()
         {
             directionVector = movementDirection == MoveDirection.Left ? Vector3.left : Vector3.right;
 
@@ -32,26 +41,16 @@ namespace FlappyBird.RunTime.Core.Location.Paralax
             }
         }
 
-        void Update()
+        private void Update()
         {
             if(!_isRunning) return;
         
             foreach (ParallaxLayer layer in parallaxLayers)
             {
-                var currentLayerSpeed = gameSpeed * layer.multiplier;
+                var currentLayerSpeed = _baselayerSpeed * layer.Multiplier;
                 
                 layer.MoveLayer(directionVector, currentLayerSpeed);
             }
-        }
-
-        public void UpdateGameSpeed(float newSpeed)
-        {
-            gameSpeed = newSpeed;
-        }
-
-        void IGameControllable.Stop()
-        {
-            _isRunning = false;
         }
     }
 }

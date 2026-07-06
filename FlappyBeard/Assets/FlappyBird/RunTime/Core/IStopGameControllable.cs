@@ -1,6 +1,6 @@
 namespace FlappyBird.RunTime.Core
 {
-    public interface IGameControllable
+    public interface IStopGameControllable
     {
         void Stop();
     }

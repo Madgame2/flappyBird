@@ -223,8 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f1305030a676249bd825503f4107e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
-  _multiplier: 0.5
-  _infiniteLoop: 1
+  multiplier: 0.5
+  infiniteLoop: 1
 --- !u!114 &129820489 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6977908585362863252, guid: e81dbf7a5ab98f24b8063d4c6e8f50ec, type: 3}
@@ -561,8 +561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f1305030a676249bd825503f4107e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
-  _multiplier: 0.1
-  _infiniteLoop: 1
+  multiplier: 0.1
+  infiniteLoop: 1
 --- !u!212 &371986549
 SpriteRenderer:
   serializedVersion: 2
@@ -1002,8 +1002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f1305030a676249bd825503f4107e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
-  _multiplier: 0.3
-  _infiniteLoop: 1
+  multiplier: 0.3
+  infiniteLoop: 1
 --- !u!212 &668762910
 SpriteRenderer:
   serializedVersion: 2
@@ -1108,8 +1108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f1305030a676249bd825503f4107e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
-  _multiplier: 0.5
-  _infiniteLoop: 1
+  multiplier: 0.5
+  infiniteLoop: 1
 --- !u!212 &840888970
 SpriteRenderer:
   serializedVersion: 2
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   _prefabsStorage: {fileID: 11400000, guid: 24d27df2773ea7a40b764643999e4199, type: 2}
   _obstacleSpawnPointRoot: {fileID: 1860658836}
   _gameplayConfig: {fileID: 11400000, guid: 63e9c193aa52ba942a8f4de28f9cca23, type: 2}
-  _parallaxController: {fileID: 1642557333}
+  parallaxController: {fileID: 1642557333}
   _audioStorage: {fileID: 11400000, guid: 8ed84164ca791014590e903a45069585, type: 2}
   _uiRoot: {fileID: 491696095}
 --- !u!1 &950849462
@@ -1711,8 +1711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f1305030a676249bd825503f4107e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
-  _multiplier: 0.3
-  _infiniteLoop: 1
+  multiplier: 0.3
+  infiniteLoop: 1
 --- !u!1001 &1642070022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1820,7 +1820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 203e72184fb7edb45939a78d02226bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxController
-  _baselayerSpeed: 5
+  gameSpeed: 5
   movementDirection: 0
 --- !u!114 &1860658836 stripped
 MonoBehaviour:
@@ -1937,8 +1937,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f1305030a676249bd825503f4107e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
-  _multiplier: 0.1
-  _infiniteLoop: 1
+  multiplier: 0.1
+  infiniteLoop: 1
 --- !u!1 &2000407723 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3408900719085293622, guid: e81dbf7a5ab98f24b8063d4c6e8f50ec, type: 3}

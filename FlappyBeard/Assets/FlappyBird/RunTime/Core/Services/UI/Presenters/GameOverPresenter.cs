@@ -7,12 +7,12 @@ using FlappyBird.RunTime.Core.Services.UI.View;
 
 namespace FlappyBird.RunTime.Core.Services.UI.Presenters
 {
-    public class GameOverPresenter: IDisposable
+    public class GameOverPresenter : IDisposable
     {
         private readonly IUIService _uiService;
         private readonly ScoreService _scoreService;
         private readonly ISceneService _sceneService;
-        private GameOverView  _gameOverView;
+        private GameOverView _gameOverView;
 
         public GameOverPresenter(IUIService uiService, ScoreService scoreService, ISceneService sceneService)
         {
@@ -20,7 +20,7 @@ namespace FlappyBird.RunTime.Core.Services.UI.Presenters
             _scoreService = scoreService;
             _sceneService = sceneService;
         }
-    
+
         public void Dispose()
         {
             if (_gameOverView != null)
@@ -29,22 +29,28 @@ namespace FlappyBird.RunTime.Core.Services.UI.Presenters
                 _gameOverView.OnHomeClicked -= HandleHome;
             }
         }
-    
+
         public void ShowGameOver()
         {
             _scoreService.SaveBestScoreIfPossible();
-        
+
             var currentScore = _scoreService.Score;
             var bestScore = _scoreService.BestScore;
-        
-            _gameOverView =_uiService.Open<GameOverView>("GameOverUI");
-        
+
+            if (_gameOverView != null)
+            {
+                _gameOverView.OnRestartClicked -= HandleRestart;
+                _gameOverView.OnHomeClicked -= HandleHome;
+            }
+
+            _gameOverView = _uiService.Open<GameOverView>("GameOverUI");
+
             _gameOverView.OnRestartClicked += HandleRestart;
             _gameOverView.OnHomeClicked += HandleHome;
-        
+
             _gameOverView.DisplayScore(currentScore, bestScore);
         }
-    
+
         private void HandleRestart()
         {
             _sceneService.ReloadScene().Forget();
