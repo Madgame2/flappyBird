@@ -10,10 +10,10 @@ namespace FlappyBird.RunTime.Core.Location.Paralax
         [SerializeField] private float _baselayerSpeed = 5f;
 
         [Tooltip("В какую сторону летят декорации фона (обычно Left, чтобы птица казалась летящей вправо)")]
-        [SerializeField] private MoveDirection movementDirection = MoveDirection.Left;
+        [SerializeField] private MoveDirection _movementDirection = MoveDirection.Left;
 
-        private List<ParallaxLayer> parallaxLayers = new List<ParallaxLayer>();
-        private Vector3 directionVector;
+        private List<ParallaxLayer> _parallaxLayers = new List<ParallaxLayer>();
+        private Vector3 _directionVector;
         private bool _isRunning = true;
 
         void IStopGameControllable.Stop()
@@ -28,7 +28,7 @@ namespace FlappyBird.RunTime.Core.Location.Paralax
         
         private void Start()
         {
-            directionVector = movementDirection == MoveDirection.Left ? Vector3.left : Vector3.right;
+            _directionVector = _movementDirection == MoveDirection.Left ? Vector3.left : Vector3.right;
 
             foreach (Transform child in transform)
             {
@@ -36,7 +36,7 @@ namespace FlappyBird.RunTime.Core.Location.Paralax
                 
                 if (layer != null)
                 {
-                    parallaxLayers.Add(layer);
+                    _parallaxLayers.Add(layer);
                 }
             }
         }
@@ -45,11 +45,11 @@ namespace FlappyBird.RunTime.Core.Location.Paralax
         {
             if(!_isRunning) return;
         
-            foreach (ParallaxLayer layer in parallaxLayers)
+            foreach (ParallaxLayer layer in _parallaxLayers)
             {
                 var currentLayerSpeed = _baselayerSpeed * layer.Multiplier;
                 
-                layer.MoveLayer(directionVector, currentLayerSpeed);
+                layer.MoveLayer(_directionVector, currentLayerSpeed);
             }
         }
     }
