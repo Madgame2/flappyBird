@@ -1,8 +1,10 @@
 using FlappyBird.RunTime.Core.Services;
+using FlappyBird.RunTime.Core.Services.Audio;
 using FlappyBird.RunTime.Core.Services.ScenesService.Infrastructure;
 using FlappyBird.RunTime.Core.Services.ScenesService.Interfaces;
 using FlappyBird.RunTime.Core.Services.Score;
 using FlappyBird.RunTime.Core.Services.UI.Components;
+using FlappyBird.RunTime.Core.Services.UI.DialogService;
 using FlappyBird.RunTime.Core.Services.UI.Factory;
 using FlappyBird.RunTime.Core.Services.UI.Interfaces;
 using FlappyBird.RunTime.Core.Services.UI.Meta;
@@ -19,15 +21,20 @@ namespace FlappyBird.RunTime.Core.Scopes
     public class AppRootScope : LifetimeScope
     {
         [SerializeField] private UIConfig _uiConfig;
-    
+        [SerializeField] private AudioSource backgroundMusicSource;
+        [SerializeField] private AudioSource sfxSource;
+
         protected override void Configure(IContainerBuilder builder)
         {
+            builder.Register<AudioService>(Lifetime.Singleton)
+                .WithParameter("musicSource", backgroundMusicSource)
+                .WithParameter("sfxSource", sfxSource)
+                .AsImplementedInterfaces();
+
             builder.RegisterInstance(_uiConfig);
-        
+
             builder.Register<SceneService>(Lifetime.Singleton)
                 .As<ISceneService>();
-
-            builder.Register<ScoreService>(Lifetime.Singleton);
 
             builder.Register<UIService>(Lifetime.Singleton).As<IUIService>();
 
@@ -41,9 +48,9 @@ namespace FlappyBird.RunTime.Core.Scopes
 
             builder.Register<UIRootProvider>(Lifetime.Singleton);
             builder.Register<DialogService>(Lifetime.Transient).AsImplementedInterfaces();
-        
+
             builder.Register<PlayerControls>(Lifetime.Singleton);
-            builder.RegisterEntryPoint<InputService>().AsSelf(); 
+            builder.RegisterEntryPoint<InputService>().AsSelf();
         }
     }
 }

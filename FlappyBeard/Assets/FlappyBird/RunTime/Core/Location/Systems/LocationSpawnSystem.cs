@@ -9,13 +9,13 @@ using VContainer.Unity;
 
 namespace FlappyBird.RunTime.Core.Location.Systems
 {
-    public class LocationSpawnSystem : IStartable, IDisposable
+    public class LocationSpawnSystem : IStartable, IDisposable, IStopGameControllable
     {
         private readonly ILocationBlockFactory _factory;
         private readonly DifficultyState _difficulty;
         private readonly Transform _spawnRoot;
-        
         private readonly CancellationTokenSource _cts = new();
+        private bool _isMoving = true;
 
         public LocationSpawnSystem(
             ILocationBlockFactory factory,
@@ -26,14 +26,19 @@ namespace FlappyBird.RunTime.Core.Location.Systems
             _difficulty = difficulty;
             _spawnRoot = spawnRoot.transform;
         }
-
-        public void Start()
+        
+        void IStopGameControllable.Stop()
+        {
+            _isMoving = false;
+        }
+        
+        void IStartable.Start()
         {
             _factory.Initialize();
             SpawnLoopAsync(_cts.Token).Forget();
         }
         
-        public void Dispose() => _cts.Cancel();
+        void IDisposable.Dispose() => _cts.Cancel();
 
         private async UniTaskVoid SpawnLoopAsync(CancellationToken token)
         {
@@ -44,7 +49,10 @@ namespace FlappyBird.RunTime.Core.Location.Systems
                 await UniTask.Delay(TimeSpan.FromSeconds(currentInterval), cancellationToken: token);
             
                 if (token.IsCancellationRequested) return;
-            
+         
+                if(!_isMoving)
+                    continue;
+                    
                 SpawnBlock();
             }
         }
